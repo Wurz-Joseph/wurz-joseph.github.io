@@ -12,13 +12,13 @@ body {
 
 h1 {
     font-size: 2.0rem;
-    color: whitesmoke;
+    color: whitesmoke;   
 }
 
 h2 {
-    
+    font-size: 1.25rem;
     text-align: center;
-    border-bottom: 1px solid #00274C;
+    border-bottom: 1px solid #bbb;
 }
 
 header, main, footer {
