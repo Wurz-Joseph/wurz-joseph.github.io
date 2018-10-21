@@ -16,7 +16,7 @@ main {
 header{
     background-color:#4ABDAC;
     text-align: center;
-    padding: .5rem 0 0 0;
+    padding: .5rem .5rem;
 }
 h1 {
     font-family:'Merriweather', serif;;
@@ -28,6 +28,9 @@ header > img{
 }
 nav{
     background-color: #F7B733;
+}
+.navigation{
+    border: 2px solid black;
 }
 
 .current-condition{

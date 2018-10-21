@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    margin: auto;
+}
+
+header {
+    background-color: #4ABDAC;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #F7B733;
+    margin: auto;
+    text-align: center;
+}
+
+header>img {
+    width: 75px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#current-condition {
+    display: inline-block;
+    margin: 1rem 0 1rem 5rem;
+    vertical-align: middle;
+    padding: 10px;
+    box-shadow: 4px 3px 8px black;
+    background-color: #F7B733;
+    display: none;
+}
+
+#condition-img {
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.headertext {
+    display: inline-block;
+    padding: .5rem;
+    margin-top: .5rem;
+    margin-right: auto;
+}
+
+.mottotext {
+    font-size: .85rem;
+    font-style: italic;
+    font-family: Helvetica, sans-serif;
+}
+
+li {
+    border-bottom: 1px solid black;
+    list-style-type: none;
+}
+
+li>a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+main {
+    max-width: 640px;
+    margin: auto;
+}
+
+.preston-sunimage {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 20px 0
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.weathersummary {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgb(247, 183, 51, .5);
+    width: 200px;
+    padding: 10px;
+}
+
+.label {
+    float: left;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+article {
+    background-color: #DFDCE3;
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    padding: 10px 0;
+}
+.article {
+    margin: 10px;
+}
+
+.deer-img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 10px
+}
+
+.forecast {
+    display: none;
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+}
+
+#contact {
+    width: 100%;
+    height: auto;
+    background-color: #DFDCE3;
+    margin-top: 10px;
+}
+
+.station-img {
+    display: none;
+}
+
+iframe {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    padding: 10px
+}
+
+footer {
+    display: none;
+}
