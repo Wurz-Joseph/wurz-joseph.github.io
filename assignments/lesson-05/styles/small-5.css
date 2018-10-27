@@ -102,7 +102,7 @@ main {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: rgb(247, 183, 51, .5);
+    background-color: rgba(247, 183, 51, .5);
     width: 200px;
     padding: 10px;
 }

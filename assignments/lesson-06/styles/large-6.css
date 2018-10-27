@@ -1,0 +1,121 @@
+@media only screen and (min-width: 640px) {
+    main {
+        max-width: 750px;
+    }
+    li {
+        display: inline-block;
+    }
+    li a {
+        border: none;
+        border-right: 1px solid rgba(157, 117, 35, 0.5);
+        padding: 3px 10px;
+    }
+    li a:hover {
+        background-color: rgba(170, 147, 17, 0.8);
+    }
+    .hide{
+        display: inline-block;
+    }
+    button{
+        display: none;
+    }
+    .home {
+        border-left: 1px solid rgba(157, 117, 35, 0.5);
+    }
+    #current-condition {
+        display: inline-block;
+        width: 150px;
+        height: auto;
+    }
+    #condition-img {
+        display: inline-block;
+        width: 55%;
+        height: auto;
+        vertical-align: middle;
+    }
+    #condition-text {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: bold;
+        width: 30%;
+    }
+    .menu {
+        display: none;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    header>img {
+        vertical-align: middle;
+        width: 75px;
+        padding: 10px;
+    }
+    .deer-img {
+        float: right;
+        width: 35%;
+    }
+    article {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
+    }
+    .forecast{
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+
+    }
+    table{
+        margin: auto;
+        border: 1px solid black;
+    }
+    th{
+        background-color:rgba(246, 180, 49, .75);
+        padding: 3px;
+    }
+    td{
+        padding: 3px;
+        border: 1px solid rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+    .station-img {
+        display: inline-block;
+        width: 200px;
+        height: auto;
+        padding: 10px;
+    }
+    .contact-info {
+        display: inline-block;
+        vertical-align: top;
+        padding: 20px;
+        text-align: center;
+        font-size: .85rem;
+    }
+    #contact {
+        width: 100%;
+        height: auto;
+        background-color: #DFDCE3;
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
+        text-align: center;
+    }
+    iframe {
+        display: block;
+        width: 25%;
+        height: 160px;
+        margin: auto;
+        float: right;
+    }
+    footer {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        background-color: rgba(74, 189, 172, .9);
+        padding: 15px 0;
+        font-size: .8rem;
+    }
+}
