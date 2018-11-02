@@ -1,0 +1,67 @@
+@media only screen and (min-width: 64em) {
+    .deer-img {
+        float: right;
+        width: 35%;
+        margin: 10px;
+        box-shadow: 4px 7px 15px 0px rgba(0, 0, 0, 0.75);
+    }
+    article {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
+    }
+    .forecast {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+    table {
+        margin: auto;
+        border: 1px solid black;
+    }
+    th {
+        background-color: rgba(246, 180, 49, .75);
+        padding: 3px;
+    }
+    td {
+        padding: 3px;
+        border: 1px solid rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+    #contact {
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
+    }
+    .station-img {
+        display: flex;
+        width: 30%;
+        height: auto;
+        margin: 10px;
+    }
+    iframe {
+        width: 30%;
+        height: auto;
+        margin: 10px;
+    }
+    footer {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        background-color: rgb(74, 189, 172);
+        padding: 15px 0;
+        font-size: .8rem;
+    }
+    .wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    figure, figure>img {
+        border-radius: 10px;
+    }
+    figure:hover {
+        box-shadow: 2px 7px 14px 5px rgba(0, 0, 0, 0.75);
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The Wiseman Weather</title>
+    <meta name="description" content="Weather information for the town of Preston, Idaho including a 5-day forecast and the current conditions. It also icludes articles relevant to Preston and images of the area as well a map showing where Preston is located">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/small-7.css">
+    <link rel="stylesheet" href="styles/medium-7.css">
+    <link rel="stylesheet" href="styles/large-7.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="../../images/logo.png" class="logo" alt="header-logo">
+        <div class="headertext">
+            <h1>The Wiseman Weather</h1>
+            <h2 class="mottotext">Don't be washed away!</h2>
+        </div>
+        <div id="current-condition">
+            <img id="condition-img" src="images/condition-img.png" alt="current weather condition">
+            <p id="condition-text">Sunny!</p>
+        </div>
+    </header>
+    <nav>
+        <button onclick="toggleMenu()">&#9776;</button>
+        <ul class="hide" id="primaryNav">
+            <li class="home">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="preston-7.html">Preston</a>
+            </li>
+            <li>
+                <a href="#">Soda Springs</a>
+            </li>
+            <li>
+                <a href="#">Fish Haven</a>
+            </li>
+            <li>
+                <a href="#">Storm Center</a>
+            </li>
+            <li class="bottom">
+                <a href="#">Gallery</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="galleryHeader">The Wiseman Gallery</h1>
+        <div class="wrapper">
+            <figure>
+                <img src="images/interstate.jpg">
+                <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, earum.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lightning.jpg">
+                <figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mountain.jpg">
+                <figcaption>Lorem, ipsum dolor.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/tornado.jpg">
+                <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo!</figcaption>
+            </figure>
+            <figure>
+                <img src="images/winter.jpg">
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, eum!</figcaption>
+            </figure>
+            <figure>
+                <img src="images/fire.jpg">
+                <figcaption>Lorem ipsum dolor sit amet consectetur.</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2018 | The Wiseman Weather | Joseph Wurz | Byu Idaho | <span id="currentDate"></span></p>
+    </footer>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+</body>
+
+</html>
