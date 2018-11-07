@@ -1,6 +1,6 @@
 table, th, td {
     font-family: "Ubuntu", sans-serif;
-    border: 1px solid #7fb9c2;
+    border: 1px solid rgba(200, 200, 200, .8);
     border-collapse: collapse;
     text-align: center;
 }
