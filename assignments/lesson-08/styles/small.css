@@ -58,7 +58,7 @@ li {
 li>a {
     display: flex;
     justify-content: center;
-    border-top: 1px solid rgba(157, 117, 35, 0.5);
+    border-top: 1px solid rgba(180, 133, 39, 0.5);
     text-decoration: none;
     color: rgba(157, 116, 35, 1);
     padding: 5px;

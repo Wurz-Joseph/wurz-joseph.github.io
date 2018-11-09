@@ -7,7 +7,7 @@
     }
     li a {
         border: none;
-        border-right: 1px solid rgba(157, 117, 35, 0.5);
+        border-right: 1px solid rgba(180, 133, 39, 0.5);
         padding: 5px;
         
     }
@@ -23,7 +23,7 @@
         display: none;
     }
     .home {
-        border-left: 1px solid rgba(157, 117, 35, 0.5);
+        border-left: 1px solid rgba(180, 133, 39, 0.5);
     }
     .menu {
         display: none;
