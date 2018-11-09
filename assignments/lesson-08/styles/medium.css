@@ -12,7 +12,8 @@
         
     }
     li a:hover {
-        background-color: rgba(170, 147, 17, 1);
+        background-color: rgb(151, 131, 16);
+        color: white;
     }
     .hide {
         display: flex;

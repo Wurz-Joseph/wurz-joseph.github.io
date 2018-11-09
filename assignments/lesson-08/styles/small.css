@@ -60,7 +60,7 @@ li>a {
     justify-content: center;
     border-top: 1px solid rgba(157, 117, 35, 0.5);
     text-decoration: none;
-    color: black;
+    color: rgba(157, 116, 35, 1);
     padding: 5px;
 }
 
@@ -73,6 +73,7 @@ li>a {
 }
 
 .navBtn {
+    color: rgba(157, 116, 35, 1);
     background-color: rgba(246, 180, 49, 0);
     border: none;
     font-size: 1.75rem;
