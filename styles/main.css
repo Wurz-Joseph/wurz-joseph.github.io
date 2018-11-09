@@ -27,20 +27,31 @@ header, main, footer {
     max-width: 800px;
 }
 
-header, footer, footer a {
+header, footer, footer a{
     text-align: center;
     background-color: #00274C;
     color: whitesmoke;
 }
-
+header, footer{
+    border-radius: 5px;
+    padding: 20px;
+}
 header img {
-    width: 200px;
+    width: 30%;
     height: auto;
     float: right;
     border: 1px solid whitesmoke;
     border-radius: 10px;
 }
-
+li a{
+    text-decoration: none;
+}
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
     font-size: .75rem;
 }
