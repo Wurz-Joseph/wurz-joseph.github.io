@@ -7,7 +7,7 @@ weatherObject.send();
 weatherObject.onload = function () {
     let weatherInfo = JSON.parse(weatherObject.responseText);
 
-    let iconsrc = "http://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png";
+    let iconsrc = "https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png";
     document.getElementById('condition-img').src = iconsrc;
     document.getElementById('condition-text').innerHTML = weatherInfo.weather[0].description;
     document.getElementById('currentCondition').innerHTML = weatherInfo.weather[0].description;
