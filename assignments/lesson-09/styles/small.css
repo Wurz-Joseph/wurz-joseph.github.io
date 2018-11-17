@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    margin: auto;
+}
+
+/*==================Header=====================*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(74, 189, 172);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(246, 180, 49, 0.7);
+    margin: auto;
+    justify-content: center;
+}
+
+.logo {
+    margin-right: 5%;
+}
+
+#current-condition {
+    display: none;
+}
+
+.headertext {
+    flex-direction: column;
+    font-family: "roboto", sans-serif;
+    margin-bottom: 10px;
+    font-size: .85rem;
+}
+
+.mottotext {
+    font-style: italic;
+    font-size: .75rem;
+}
+
+/*==================Nav-Bar=====================*/
+
+li {
+    list-style-type: none;
+}
+
+li>a {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(180, 133, 39, 0.5);
+    text-decoration: none;
+    color: rgba(157, 116, 35, 1);
+    padding: 5px;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.hide {
+    display: none;
+}
+
+.navBtn {
+    color: rgba(157, 116, 35, 1);
+    background-color: rgba(246, 180, 49, 0);
+    border: none;
+    font-size: 1.75rem;
+}
+
+/*==================Main-Content=====================*/
+
+main {
+    max-width: 640px;
+    margin: auto;
+}
+
+.pageHeader {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.franklin {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.weathersummary {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(247, 183, 51, .75);
+    width: 200px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: 4px 14px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.label {
+    float: left;
+    font-weight: bold;
+}
+
+.value {
+    color: yellow;
+    text-align: right;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+article {
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    padding: 10px 0 30px 0;
+}
+
+.article {
+    font-size: 15px;
+    margin: 10px 20px;
+}
+
+.deer-img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.forecast {
+    display: none;
+}
+
+/*==================Contact-Info=====================*/
+
+#contact {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(223, 220, 227);
+    margin-top: 10px;
+}
+
+.contact-info {
+    width: 30%;
+    align-self: center;
+    text-align: center;
+    font-size: .85rem;
+}
+
+.station-img {
+    display: none;
+}
+
+iframe {
+    border: 1px solid rgba(176, 174, 180, .85);
+    width: 50%;
+    height: auto;
+    margin: 10px;
+}
+
+.wrapper {
+    display: grid;
+    text-align: center;
+    margin-top: 20px;
+    grid-template-columns: 300px;
+    justify-content: center;
+    grid-gap: 1.2em;
+}
+
+figure>img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: .85rem;
+    margin: 5px;
+}
+
+footer {
+    display: none;
+}
+
+/*--------------FORM-------------*/
+
+form {
+    max-width: 640px;
+    margin: 2rem auto;
+}
+
+fieldset {
+    margin: 2rem;
+    border: none;
+}
+
+label {
+    display: block;
+    width: 100%;
+    padding: .75rem 0;
+    margin: .5rem 0;
+}
+
+.textfield, textarea {
+    display: block;
+    width: 90%;
+    padding: .5rem;
+    margin: .2rem;
+    font-size: 18px;
+    border: 1px solid #4abdac;
+    background-color: rgba(224, 220, 230, 0.6);
+}
+
+.formsection {
+    font-size: 1rem;
+    margin: 2rem 0 0 0;
+    text-align: left;
+}
+
+.ratinglabel {
+    padding: 0;
+    margin: 1.5rem 0 .8rem 0;
+}
+
+#rating {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 10px;
+    background: rgba(176, 174, 180, .85);
+    border-radius: 5px;
+    outline: none;
+}
+
+#rating::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 30px;
+    border-radius: 50px;
+    background: rgb(250, 0, 0);
+    cursor: pointer;
+}
+
+.region {
+    margin: 1rem 0;
+}
+
+.region select {
+    display: block;
+    margin: .5rem 0;
+    font-size: 20px;
+}
+
+#ratingvalue {
+    font-size: 1.5rem;
+    font-family: "spicy rice", serif;
+    padding: 0 .2rem;
+    margin: 0 .2rem;
+}
+
+.radio {
+    padding: .5rem;
+    margin: .5rem;
+    font-size: 20px;
+}
+
+.submitBtn {
+    background: rgb(74, 189, 172);
+    width: 60%;
+    border: none;
+    padding: .75rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.submitBtn:hover {
+    background: rgb(53, 138, 125);
+    ;
+    color: white;
+    cursor: pointer;
+}
+
+.note {
+    font-size: 20px;
+    border: 1px solid rgba(176, 174, 180, .85);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(246, 180, 49, 0.7);
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.backBtn {
+    display: block;
+    text-align: center;
+    color: rgb(35, 12, 245);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.backBtn:hover {
+    color: rgb(246, 180, 49);
+}
+
+/*------------HomePage----------------*/
+
+.fireImg {
+    width: 100%;
+    
+}
+
+.towns {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.townstyle {
+    display: grid;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+.townstyle>p {
+    font-size: 15px;
+    text-align: center;
+}
+.townstyle span{
+    font-weight: none;
+}
+.townImg {
+    margin: 5px auto;
+    
+}
+
+.townName {
+    color: rgb(151, 131, 16);
+}
+
+.townMotto {
+    font-style: italic;
+    
+}
+section span {
+    font-weight: bold;
+}

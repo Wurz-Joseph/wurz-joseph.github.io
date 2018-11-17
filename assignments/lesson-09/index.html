@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Wiseman Weather</title>
+    <meta name="description" content="Weather information for the town of Preston, Idaho including a 5-day forecast and the current conditions.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="../../images/logo.png" class="logo" alt="header-logo">
+        <div class="headertext">
+            <h1>Wiseman Weather</h1>
+            <h2 class="mottotext">Don't be washed away!</h2>
+        </div>
+        <div id="current-condition">
+            <img id="condition-img" alt="current weather condition">
+            <p id="condition-text">Sunny!</p>
+        </div>
+    </header>
+    <nav>
+        <button class="navBtn" onclick="toggleMenu()">&#9776;</button>
+        <ul class="hide" id="primaryNav">
+
+            <li class="home">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="preston.html">Preston</a>
+            </li>
+            <li>
+                <a href="#">Soda Springs</a>
+            </li>
+            <li>
+                <a href="#">Fish Haven</a>
+            </li>
+            <li>
+                <a href="stormcenter.html">Storm Center</a>
+            </li>
+            <li class="bottom">
+                <a href="gallery.html">Gallery</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="grid">
+            <img srcset="images/wildfire-small.jpg 640w, images/wildfire-large.jpg 750w" sizes="(max-width:640px) 640px, 750px"
+                src="images/wildfire-large.jpg" alt="forest fire image" class="fireImg">
+
+            <article class="weatherstory">
+                <h3>California Wildfires</h3>
+                <p class="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quidem molestiae
+                    error nam quos
+                    saepe possimus
+                    impedit incidunt reiciendis fugiat esse consequatur. Eos, adipisci consequuntur ipsa accusamus qui
+                    aspernatur alias?
+                </p>
+            </article>
+        </section>
+        <div class="towns">
+            <section class="townstyle">
+                <h3 class="townName">Preston</h3>
+                <img src="images/preston-idaho.jpg" alt="#" class="townImg">
+                <p><span id="prestonMotto" class="townMotto"></span></p><br>
+                <p>Year Founded: <span id="prestonFound"></span></p>
+                <p>Population: <span id="prestonPop"></span></p>
+                <p>Annual Rain Fall: <span id="prestonRain"></span></p>
+            </section>
+            <section class="townstyle">
+                <h3 class="townName">Soda Springs</h3>
+                <img src="images/soda-springs.jpg" alt="#" class="townImg">
+                <p><span id="sodaMotto" class="townMotto"></span></p><br>
+                <p>Year Founded: <span id="sodaFound"></span></p>
+                <p>Population: <span id="sodaPop"></span></p>
+                <p>Annual Rain Fall: <span id="sodaRain"></span></p>
+            </section>
+            <section class="townstyle">
+                <h3 class="townName">Fish Haven</h3>
+                <img src="images/fish-haven.jpg" alt="#" class="townImg">
+                <p><span id="fishMotto" class="townMotto"></span></p><br>
+                <p>Year Founded: <span id="fishFound"></span></p>
+                <p>Population: <span id="fishPop"></span></p>
+                <p>Annual Rain Fall: <span id="fishRain"></span></p>
+            </section>
+
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2018 | Wiseman Weather | Joseph Wurz | Byu Idaho | <span id="currentDate"></span></p>
+        <p>Weather Information Obtained From <a href="https://openweathermap.org/">Open Weather Map</a></p>
+    </footer>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/townData.js"></script>
+</body>
+
+</html>
