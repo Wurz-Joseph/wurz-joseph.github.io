@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Wiseman Weather</title>
-    <meta name="description" content="Wiseman Weather homepage. Preston, Soda Springs, and Fish Haven general information.">
+    <meta name="description" content="Wiseman Weather homepage and main weather hub for southeast idaho">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -20,26 +20,22 @@
             <h1>Wiseman Weather</h1>
             <h2 class="mottotext">Don't be washed away!</h2>
         </div>
-        <div id="current-condition">
-            <img src="#" id="condition-img" alt="current weather condition">
-            <p id="condition-text">Sunny!</p>
-        </div>
     </header>
     <nav>
         <button class="navBtn" onclick="toggleMenu()">&#9776;</button>
         <ul class="hide" id="primaryNav">
 
-            <li class="home">
+            <li class="home active">
                 <a href="index.html">Home</a>
             </li>
             <li>
                 <a href="preston.html">Preston</a>
             </li>
             <li>
-                <a href="#">Soda Springs</a>
+                <a href="sodasprings.html">Soda Springs</a>
             </li>
             <li>
-                <a href="#">Fish Haven</a>
+                <a href="fishhaven.html">Fish Haven</a>
             </li>
             <li>
                 <a href="stormcenter.html">Storm Center</a>
@@ -100,7 +96,7 @@
     </footer>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/currentdate.js"></script>
-    <script src="scripts/weather.js"></script>
+    <script src="scripts/preston-weather.js"></script>
     <script src="scripts/townData.js"></script>
 </body>
 

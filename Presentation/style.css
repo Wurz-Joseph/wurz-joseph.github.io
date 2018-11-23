@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html {
+    max-width: 65%;
+    margin: 0 auto;
+}
+h1{
+    background-color: #00274C;
+    padding: 30px;
+    text-align: center;
+    color: #FFCB05;
+}
+header {
+    margin: auto;
+}
