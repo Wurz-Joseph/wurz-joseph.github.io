@@ -5,7 +5,6 @@ weatherObj.send();
 
 weatherObj.onload = function() {
     let weatherInfo = JSON.parse(weatherObj.responseText);
-    
     document.getElementById('prestonMotto').innerHTML = weatherInfo.towns[4].motto;
     document.getElementById('prestonFound').innerHTML = weatherInfo.towns[4].yearFounded;
     document.getElementById('prestonPop').innerHTML = weatherInfo.towns[4].currentPopulation;
