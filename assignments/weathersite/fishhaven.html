@@ -7,15 +7,15 @@
     <title>Wiseman Weather</title>
     <meta name="description" content="Weather information for Fish Haven, Idaho including a 5-day forecast and the current conditions.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/fishsmall.css">
+    <link rel="stylesheet" href="styles/fishmedium.css">
+    <link rel="stylesheet" href="styles/fishlarge.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
 
-<body>
-    <header>
+<body class="grid-wrapper">
+    <header class="header-grid">
         <img src="../../images/logo.png" class="logo" alt="header-logo">
         <div class="headertext">
             <h1>Wiseman Weather</h1>
@@ -56,20 +56,19 @@
         <div class="container">
             <img src="images/fishhaven-main.jpg" alt="bear lake" class="mainImg">
             <section class="weathersummary">
-                <h3>Weather Summary</h3>
-                <div class="weatherdetails">
-                    <p class="label">Currently:</p>
-                    <p class="value"><span id="currentCondition"></span></p>
-                    <p class="label">Temperature:</p>
-                    <p class="value"><span id="temp"></span>&deg;F</p>
-                    <p class="label">Wind Chill Factor:</p>
-                    <p class="value"><span id="windChill"></span>&deg;F</p>
-                    <p class="label">Humidity:</p>
-                    <p class="value"><span id="humidity"></span>%</p>
-                    <p class="label">Wind Speed:</p>
-                    <p class="value"><span id="speed"></span> MPH</p>
+                <h3 class="summary">Weather Summary</h3>
 
-                </div>
+                <p class="label">Currently: </p>
+                <p class="value"><span id="currentCondition"></span></p>
+                <p class="label">Temperature: </p>
+                <p class="value"><span id="temp"></span>&deg;F</p>
+                <p class="label">Wind Chill: </p>
+                <p class="value"><span id="windChill"></span>&deg;F</p>
+                <p class="label">Humidity: </p>
+                <p class="value"><span id="humidity"></span>%</p>
+                <p class="label">Wind Speed: </p>
+                <p class="value"><span id="speed"></span> MPH</p>
+
             </section>
         </div>
         <section class="forecast">
@@ -97,31 +96,30 @@
                 </tbody>
             </table>
         </section>
-        <article>
-            <h3>Abandoned House is Haunted</h3>
+        <article class="article">
+            <h3>Abandoned House Said to be Home of Bigfoot</h3>
             <img src="images/fishhaven-house.jpg" alt="abondoned house" class="articleImg">
-            <p class="article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quas dolorem nisi
-                similique mollitia? Modi expedita officia magnam recusandae, provident nesciunt maxime sequi
-                necessitatibus veniam hic voluptatibus saepe at repellendus!
-                Commodi suscipit, facere tempore ab doloribus dolor dolorum accusamus, unde consequuntur officia optio
-                dolorem! Dolor totam nulla facere excepturi velit, commodi mollitia non dicta, cum nostrum ipsa cumque
-                doloremque labore.
-                Repellat accusamus dolor id? Fugiat optio assumenda, nobis expedita ea vel illo consequatur commodi
-                magni, sequi voluptate necessitatibus aliquam quos alias facere maxime tempore quasi illum quo hic!
-                Neque, molestiae! </p>
+            <p class="article">Idaho, like it’s neighboring states, has had many sightings of the legendary beast known
+                as Bigfoot. Where the legend of Bigfoot differs in Idaho however, is in the belief that Bigfoot is a
+                government cover-up. Some claim the sightings of the beast are swept under the rug so that its
+                existence will be treated like a legend. Because that’s the easiest way for the government to cover up
+                their experiment gone wrong, obviously.<a href="https://www.ranker.com/list/creepy-idaho-stories-legends/lyra-radford"> Keep Reading</a>
+
+         </p>
         </article>
-        <div id="contact">
-            <img src="images/weatherstation.jpg" class="station-img" alt="mountains">
-            <div class="contact-info">
-                <h4>Contact Info</h4>
-                <p>30 N 1st E</p>
-                <p>Preston, ID 83263</p>
-                <p>wisemanweather@byui.edu</p>
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.77385343802!2d-111.91534443111685!3d42.09974162639048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1540079669395"
-                allowfullscreen></iframe>
-        </div>
+
     </main>
+    <div id="contact">
+        <img src="images/weatherstation.jpg" class="station-img" alt="mountains">
+        <div class="contact-info">
+            <h4>Contact Info</h4>
+            <p>30 N 1st E</p>
+            <p>Preston, ID 83263</p>
+            <p>wisemanweather@byui.edu</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.77385343802!2d-111.91534443111685!3d42.09974162639048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C+ID+83263!5e0!3m2!1sen!2sus!4v1540079669395"
+            allowfullscreen></iframe>
+    </div>
     <footer>
         <p>&copy;2018 | Wiseman Weather | Joseph Wurz | Byu Idaho | <span id="currentDate"></span></p>
         <p>Weather Information Obtained From <a href="https://openweathermap.org/">Open Weather Map</a></p>

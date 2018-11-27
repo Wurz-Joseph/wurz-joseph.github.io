@@ -26,7 +26,10 @@ nav {
     margin: auto;
     justify-content: center;
 }
-
+li.active a{
+    background-color: rgb(182, 157, 19);
+    color: white;
+}
 .logo {
     margin-right: 5%;
 }
@@ -76,7 +79,6 @@ li>a {
     border: none;
     font-size: 1.75rem;
 }
-
 /*==================Main-Content=====================*/
 
 main {
