@@ -1,0 +1,134 @@
+@media only screen and (min-width: 65em) {
+    html {
+        background-image: url('../images/background.jpg');
+        background-position: absolute;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .body {
+        height: 100vh;
+    }
+    nav li a {
+        transition: 0.3s;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+    nav li a:hover {
+        background-color: white;
+        color: coral;
+        padding: 15px 10px;
+    }
+    p.tap {
+        display: none;
+    }
+    p.click {
+        display: block;
+        font-size: 20px;
+        margin-left: 8%;
+        padding-top: 30px;
+        position: absolute;
+    }
+    .container img {
+        cursor: pointer;
+    }
+    .reserveBtn {
+        width: 200px;
+        height: 50px;
+        transition: all .1s ease-in-out;
+    }
+    .reserveBtn:hover {
+        transition: 0.3s;
+        color: white;
+        cursor: pointer;
+    }
+    div.reserve {
+        justify-self: start;
+        margin-left: 10%;
+        position: absolute;
+    }
+    .site-logo {
+        grid-area: 2;
+    }
+    h1.page-heading {
+        grid-area: 3;
+    }
+    div.imageContainer {
+        width: 80%;
+    }
+    fieldset {
+        background-color: coral;
+    }
+    legend {
+        display: none;
+    }
+    .label, .radio {
+        color: navy;
+    }
+    .submitBtn {
+        background-color: navy;
+        color: cyan;
+    }
+    figure.templeOfMonth {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    img.templeOfMonth {
+        grid-area: 2;
+    }
+    figcaption {
+        grid-area: 2;
+    }
+    figure h3 {
+        align-self: end;
+    }
+    .temple-info .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 8%;
+    }
+    .mission {
+        justify-self: center;
+    }
+    iframe {
+        width: 400px;
+        margin: 4rem;
+        grid-area: 1/2;
+        align-self: end;
+    }
+    main.grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    section.contact {
+        font-size: 20px;
+        line-height: 2rem;
+        grid-area: 1/2;
+        text-align: left;
+        margin-left: 100px;
+    }
+    .left {
+        text-align: left;
+        margin-left: 5%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .serviceImg {
+        display: block;
+        align-self: center;
+        width: 400px;
+        margin-top: 10%;
+        border-radius: 10px;
+    }
+    .serviceImg:hover {
+        box-shadow: 0px 5px 24px 3px rgba(255, 127, 80, 1);
+        transform: scale(1.1);
+    }
+    .desk {
+        align-self: end;
+    }
+}
