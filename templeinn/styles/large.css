@@ -47,7 +47,7 @@
     div.reserve {
         justify-self: start;
         margin-left: 10%;
-        position: absolute;
+        position: relative;
     }
     .site-logo {
         grid-area: 2;
