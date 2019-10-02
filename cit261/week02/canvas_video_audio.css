@@ -1,0 +1,23 @@
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+.audio-tag {
+    margin: 10px;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+canvas {
+    background-color: #00FFFF;
+}
+
+p {
+    font-size: 14px
+}

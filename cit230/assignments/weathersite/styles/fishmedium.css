@@ -1,0 +1,117 @@
+@media only screen and (min-width: 37.5em) {
+    body.grid-wrapper {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+    ul {
+        display: grid;
+    }
+    li a {
+        border: none;
+        padding: 5px;
+    }
+    li.active a {
+        background-color: rgb(182, 157, 19);
+        color: white;
+    }
+    li a:hover, li.active a:hover {
+        background-color: rgb(145, 124, 7);
+        color: white;
+    }
+    .hide {
+        display: grid;
+        align-items: center;
+        grid-template-rows: repeat(6, 50px);
+    }
+    .navBtn {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    header {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: span 3;
+        width: 100%;
+        background-color: rgb(74, 189, 172);
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    .logo {
+        justify-self: end;
+    }
+    #current-condition {
+        display: grid;
+        width: 150px;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5%;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.75);
+        background-color: rgba(246, 180, 49, 0.7);
+    }
+    #condition-text {
+        align-self: center;
+        justify-self: start;
+        color: rgb(155, 114, 32);
+        font-weight: bold;
+    }
+    #condition-img {
+        justify-self: center;
+    }
+    main div#contact{
+        grid-column: span 3;
+    }
+    .forecast {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        display: block;
+        margin: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+    article.article{
+        margin: 20px;
+    }
+    table {
+        margin: auto;
+        border: 1px solid black;
+    }
+    th {
+        background-color: rgba(246, 180, 49, .75);
+        padding: 3px;
+    }
+    td {
+        padding: 3px;
+        border: 1px solid rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+    .articleImg {
+        float: right;
+        width: 35%;
+        margin: 10px;
+        box-shadow: 4px 7px 15px 0px rgba(0, 0, 0, 0.75);
+    }
+    article {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
+    }
+   
+    #contact {
+        border: 1px solid rgb(208, 205, 212);
+        grid-row: 3;
+        grid-column: span 3;
+    }
+   
+    footer {
+        display: grid;
+        grid-column: span 3;
+        text-align: center;
+        background-color: rgb(74, 189, 172);
+        padding: 15px 0;
+        font-size: .8rem;
+    }
+}

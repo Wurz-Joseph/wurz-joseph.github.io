@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    margin: auto;
+}
+
+header {
+    background-color: rgba(74, 189, 172, .9);
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(246, 180, 49, .75);
+    margin: auto;
+    text-align: center;
+}
+
+header>img {
+    width: 10%;
+    height: auto;
+    padding: 10px;
+}
+
+#current-condition {
+    display: none;
+}
+
+.headertext {
+    display: inline-block;
+    padding: .5rem;
+    margin-top: .5rem;
+    margin-right: auto;
+    vertical-align: top;
+}
+
+.mottotext {
+    font-size: .85rem;
+    font-style: italic;
+    font-family: Helvetica, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+li>a {
+    display: block;
+    border-top: 1px solid rgba(157, 117, 35, 0.5);
+    text-decoration: none;
+    color: black;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    background-color: rgba(246, 180, 49, 0);
+    border: none;
+}
+
+main {
+    max-width: 640px;
+    margin: auto;
+}
+
+.franklin {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.weathersummary {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(247, 183, 51, .5);
+    width: 200px;
+    padding: 10px;
+}
+
+.label {
+    float: left;
+    font-weight: bold;
+}
+
+.value {
+    color: yellow;
+    text-align: right;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+article {
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.article {
+    margin: 10px 20px;
+}
+
+.deer-img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 10px
+}
+
+.forecast {
+    display: none;
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#contact {
+    width: 100%;
+    height: auto;
+    background-color: #DFDCE3;
+    margin-top: 10px;
+}
+
+.station-img {
+    display: none;
+}
+
+iframe {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    padding: 10px
+}
+
+footer {
+    display: none;
+}

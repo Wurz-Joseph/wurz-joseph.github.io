@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="Temple Inn & Suites hotel rooms available near your the temple of your choosing.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Temple Inn & Suites | Home</title>
+</head>
+
+<body>
+    <header class="header grid">
+        <img src="images/site-logo.png" class="site-logo" alt="logo">
+        <h1 class="page-heading">Temple Inn & Suites</h1>
+        <button aria-label="Open navigation menu" type="button" class="navBtn fas fa-bars fa-3x"></button>
+        <nav>
+
+            <ul id="primaryNav" class="hide grid">
+
+                <li class="home">
+                    <a class="active" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="temple.html">Temples</a>
+                </li>
+                <li>
+                    <a href="reservations.html">Reservations</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+
+        <div class="grid">
+            <div class="reserve">
+                <button aria-label="go to reservations form" class="reserveBtn" onClick="location.href='reservations.html'">Make a Reservation</button>
+            </div>
+            <h3 class="heading">We Hope to See You Soon!</h3>
+            <div class="grid">
+                <div class="imageContainer">
+                    <img src="images/family-history.jpg" alt="Family History Center" class="slide active">
+                    <img src="images/lubbock.jpg" alt="Lubock Temple" class="slide">
+                    <img src="images/manti.jpg" alt="Manti Temple" class="slide">
+                    <img src="images/font.jpg" alt="Baptism Font" class="slide">
+                    <img src="images/nauvoo.jpg" alt="Nauvoo Temple" class="slide">
+                </div>
+                <i class="fas fa-arrow-circle-left fa-3x prev"></i>
+                <i class="fas fa-arrow-circle-right fa-3x next"></i>
+            </div>
+
+        </div>
+        <figure class="templeOfMonth grid">
+            <h3 class="heading">The Temple of the Month</h3>
+            <img src="images/provo-city-center.jpg" alt="temple of the month" class="templeOfMonth">
+            <figcaption>The temple of the Month for December is the Provo City Center temple. It was announced on
+                October
+                1, 2011 by President Thomas S. Monson. The groundbreaking was held on May 12, 2012, and it was
+                dedicated on March 20, 2016. The
+                dedicatory prayer can be found <a href="https://www.lds.org/temples/details/provo-city-center-temple/prayer/2016-03-20">here</a>.
+            </figcaption>
+        </figure>
+        <section class="contact">
+
+            <h3>Contact Info</h3>
+
+            <p>templeinn@gmail.com<br>
+                (301)555-0501<br>
+                4800 Montgomery Ln #300<br>
+                Bethesda, MD<br>
+                20814</p>
+        </section>
+
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/slider.js"></script>
+    <footer>
+        <p>&copy;2018 | Temple Inn & Suites | Byu Idaho| <a href="sources.txt">Sources</a></p>
+        <a aria-label="developers facebook" class="fab fa-facebook fa-2x" href="https://www.facebook.com/joe.wurz"></a>
+    </footer>
+</body>
+
+
+</html>

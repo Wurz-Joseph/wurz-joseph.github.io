@@ -1,0 +1,48 @@
+@media only screen and (min-width: 64em) {
+    nav {
+        grid-column: span 3;
+        justify-content: center;
+    }
+    .hide{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: none;
+    }
+    main{
+        max-width: 640px;
+        grid-column: span 3;
+    }
+    #contact{
+        grid-template-columns: 1fr 1fr 1fr;
+         grid-row: 4;
+         max-width: 600px;
+         grid-column: span 3;
+         margin: 20px auto;
+    }
+    iframe{
+        width: 90%;
+    }
+    li a {
+        border: none;
+        border-right: 1px solid rgba(180, 133, 39, 0.5);
+        padding: 5px;
+    }
+    li a {
+        border: none;
+        border-right: 1px solid rgba(180, 133, 39, 0.5);
+        padding: 5px;
+    }
+    li a:hover, li.active a:hover {
+        background-color: rgb(145, 124, 7);
+        color: white;
+    }
+    .home {
+        border-left: 1px solid rgba(180, 133, 39, 0.5);
+    }
+    .station-img {
+        display: inline-grid;
+        width: 95%;
+        height: auto;
+        margin: 10px;
+    
+    }
+}
