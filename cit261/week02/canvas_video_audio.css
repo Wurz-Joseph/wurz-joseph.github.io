@@ -1,21 +1,22 @@
 body {
-    max-width: 800px;
     margin: auto;
-}
-
-.audio-tag {
-    margin: 10px;
-    text-align: center;
+    max-width: 600px;
 }
 
 .tag {
-    display: inline-block;
     margin: 10px;
     text-align: center;
+    background-color: #3fb0ac;
+    padding: 20px;
+    border-radius: 15px;
+    
 }
 
 canvas {
-    background-color: #00FFFF;
+    background-color: black;
+}
+canvas, video, audio {
+    width: 80%;
 }
 
 p {
