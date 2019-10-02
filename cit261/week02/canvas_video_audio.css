@@ -9,12 +9,12 @@ body {
     background-color: #3fb0ac;
     padding: 20px;
     border-radius: 15px;
-    
 }
 
 canvas {
     background-color: black;
 }
+
 canvas, video, audio {
     width: 80%;
 }
