@@ -10,7 +10,7 @@ console.log(jsonData);
 console.log(jsObject);
 
 
-//document.write(obj.fName + " " + obj.lName + " " + "was born in " + obj.birthState);
+//document.write("<br>" + obj.fName + " " + obj.lName + " " + "was born in " + obj.birthState);
 
 
 //use stringify to convert from JavaScript object to JSON format.

@@ -1,0 +1,17 @@
+body {
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.tag {
+    margin: 10px;
+    text-align: center;
+    background-color: #3fb0ac;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h3 {
+    font-size: 2em;
+}
