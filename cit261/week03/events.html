@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript Events</title>
+    <link rel="stylesheet" href="styles/events.css">
 </head>
-<body>
+
+<body onload="alertOnLoad()">
     <h3>Standard JavaScript Events</h3>
-    <p></p>
+    <button type="button" onclick="displayImage()">Click to Trigger Event</button>
+    <img src="images/lubbock.jpg" id="image" alt="Lubbock Texas Temple">
+
+    <div id="mobile-edge">
+
+        <div id="mobile-center">
+            <div id="square">
+            </div>
+        </div>
+        <button onclick="moveSquare()" type="button" class="phone"></button>
+    </div>
+
+    <script src="scripts/events.js"></script>
 </body>
+
 </html>

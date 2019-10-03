@@ -1,0 +1,55 @@
+body {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+button {
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#image {
+    width: 60%;
+    display: none;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+
+#mobile-edge {
+    margin: 50px auto;
+    padding: 40px 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 330px;
+    height: 550px;
+}
+
+#mobile-center {
+    margin: auto;
+    border: 1px solid black;
+    width: 330px;
+    height: 530px;
+}
+
+.phone {
+    vertical-align: middle;
+    width: 60px;
+    border-radius: 50px;
+}
+
+.phone:focus {
+    outline: 0;
+}
+
+#square {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
