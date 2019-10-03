@@ -11,6 +11,11 @@ body {
     border-radius: 15px;
 }
 
+h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
 canvas {
     background-color: black;
 }
