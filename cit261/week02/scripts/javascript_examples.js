@@ -64,8 +64,8 @@ for (var i = 0; i < zooAnimals.length; i++)
   console.log(zooAnimals[i]);
 
 ////////While Loop/////////
-//initialize to 21
-var number = 21;
+//initialize to 10
+var number = 10;
 
 //loop while number is greater than 0
 while (number > 0) {
@@ -87,9 +87,9 @@ while (i < 5);
 
 ///////function////////
 
-//function that doesn't return anything
+//function that doesn't have a return
 function sendGreeting(name, course) {
-  console.log("hello " + name + ". Welcome to " + course);
+  console.log("Hello " + name + ". Welcome to " + course);
 }
 
 //function that returns the area
