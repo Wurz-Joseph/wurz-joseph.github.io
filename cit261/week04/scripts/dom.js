@@ -20,12 +20,13 @@ function removeItem() {
 function insertAbove() {
     let newListItem = document.createElement("LI");
     let text = document.getElementById('itemText').value;
-    let textNode = document.createTextNode(text);
-    newListItem.appendChild(textNode);
-    let list = document.getElementById('list');
-    list.insertBefore(newListItem, list.childNodes[0]);
+    if (text != '') {
+        let textNode = document.createTextNode(text);
+        newListItem.appendChild(textNode);
+        let list = document.getElementById('list');
+        list.insertBefore(newListItem, list.childNodes[0]);
 
-    document.getElementById('itemText').value = '';
-    document.getElementById('itemText').focus();
-
+        document.getElementById('itemText').value = '';
+        document.getElementById('itemText').focus();
+    }
 }
