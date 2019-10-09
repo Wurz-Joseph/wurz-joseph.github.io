@@ -1,0 +1,54 @@
+body {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+.section{
+    padding: 10px;
+    margin: 20px 0;
+    background-color: pink;
+    border-radius: 5px;
+    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid black;
+}
+input{
+    font-size: 20px;
+    margin: auto;
+    width: 45%;
+    padding: 5px;
+}
+button{
+    display: block;
+    background-color: #ffec82;
+    color: black;
+    border: none;
+    width: 30%;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+       
+}
+.ul{
+    margin: auto;
+    text-align: left;
+    width: 40%;
+    font-size: 1.5rem;
+}
+pre {
+    text-align: left;
+    width: 100%;
+}
+p {
+    text-align: left;
+    margin: 20px;
+    line-height: 1.5;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+

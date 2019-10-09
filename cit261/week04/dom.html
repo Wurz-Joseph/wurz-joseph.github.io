@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="styles/DOM.css">
+</head>
+
+
+
+<body>
+    <h1>DOM Manipulation</h1>
+
+    <div class="section">
+        <h3>Create Element/Append Child</h3>
+        <!-- HTML generated using hilite.me -->
+        <div class="scroll"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">function</span> addItem() {
+    <span style="color: #0000ff">let</span> newListItem = document.createElement(<span style="color: #a31515">&quot;LI&quot;</span>);
+    <span style="color: #0000ff">let</span> text = document.getElementById(<span style="color: #a31515">&#39;itemText&#39;</span>).value;
+    <span style="color: #0000ff">if</span> (text != <span style="color: #a31515">&#39;&#39;</span>) {
+      <span style="color: #0000ff">let</span> textNode = document.createTextNode(text);
+      newListItem.appendChild(textNode);
+      document.getElementById(<span style="color: #a31515">&#39;list&#39;</span>).appendChild(newListItem);
+      document.getElementById(<span style="color: #a31515">&#39;itemText&#39;</span>).value = <span style="color: #a31515">&#39;&#39;</span>;
+      document.getElementById(<span style="color: #a31515">&#39;itemText&#39;</span>).focus();
+    }
+  }
+  </pre>
+
+        </div>
+        <p>
+            The function above uses document.createElement("LI") to create a new list item. Notice that "LI" is
+            capitalized.
+            The node names of HTML elements are always capitalized. The variable text is used to grab the user's entered
+            text from the
+            text box in my Grocery List program below. I added an if statement to prevent the user from being able to
+            add empty
+            list items to the grocery list.<br><br>
+
+            HTML elments can consist of both an element node and a text node. The createTextNode method creates the text
+            node portion
+            which I then append to the newly create &lt;li&gt; element. Finally I used appendChild to add the &lt;li&gt;
+            element with text to an
+            ordered list.
+        </p>
+    </div>
+    <div class="section">
+        <h3>Remove Child</h3>
+        <!-- HTML generated using hilite.me -->
+        <div class="scroll"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">function</span> removeItem() {
+  <span style="color: #0000ff">let</span> list = document.getElementById(<span style="color: #a31515">&#39;list&#39;</span>);
+  list.removeChild(list.lastChild);
+}
+</pre>
+        </div>
+        <p>
+            The removeChild() method can be used to remove a specified child node of an element. In the example above I
+            remove the
+            last child node from the ordered list. You can also specify a specific item by giving the index of
+            that item.
+            You can do this by replacing the list.lastChild text with list.childNodes[i] where 'i' is the index of the
+            node to be removed.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Insert Before</h3>
+        <!-- HTML generated using hilite.me -->
+        <div class="scroll"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">function</span> insertAbove() {
+  <span style="color: #0000ff">let</span> newListItem = document.createElement(<span style="color: #a31515">&quot;LI&quot;</span>);
+  <span style="color: #0000ff">let</span> text = document.getElementById(<span style="color: #a31515">&#39;itemText&#39;</span>).value;
+  <span style="color: #0000ff">let</span> textNode = document.createTextNode(text);
+  newListItem.appendChild(textNode);
+  <span style="color: #0000ff">let</span> list = document.getElementById(<span style="color: #a31515">&#39;list&#39;</span>);
+  list.insertBefore(newListItem, list.childNodes[0]);
+
+  document.getElementById(<span style="color: #a31515">&#39;itemText&#39;</span>).value = <span style="color: #a31515">&#39;&#39;</span>;
+  document.getElementById(<span style="color: #a31515">&#39;itemText&#39;</span>).focus();
+}
+</pre>
+        </div>
+        <p>
+            The syntax is node.insertBefore(<i>newnode, existingnode</i>); <i>newnode</i> is where you would put the new
+            element that will be inserted
+            and <i>existingnode</i> is the node and index that your new element will be inserted in front of.
+            In the example above I insert a new &lt;li&gt; element at the beginning of the list.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Grocery List</h1>
+            <input type="text" id="itemText"></input>
+            <button type="button" onclick="addItem()">Add Item</button>
+            <button type="button" onclick="removeItem()">Remove Item</button>
+            <button type="button" onclick="insertAbove()">Insert Above</button>
+            <div class="ul">
+                <ol id="list">
+                </ol>
+            </div>
+    </div>
+
+
+    <script src="scripts/DOM.js"></script>
+</body>
+
+</html>
