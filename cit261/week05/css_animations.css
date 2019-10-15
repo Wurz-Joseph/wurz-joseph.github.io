@@ -87,6 +87,10 @@ li {
 .is-hidden{
     animation: fadeOut 0.8s ease 0s normal forwards 1;
 }
+.hilite{
+    background-color: yellow;
+    
+}
 
 @keyframes slideIn {
     from {left: -150%;}
