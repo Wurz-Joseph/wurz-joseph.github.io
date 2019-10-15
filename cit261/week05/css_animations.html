@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Animations</title>
+    <link rel="stylesheet" href="css_animations.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="title">CSS<span>ANIMATIONS</span></h1>
+        <p class="content">"CSS animations make it possible to animate transitions from one CSS style configuration to
+            another. Animations consist of two components, a style describing the CSS animation and a set of keyframes
+            that indicate the start and end states of the animation’s style, as well as possible intermediate
+            waypoints"<br> -MDN Web docs.
+
+        </p>
+        <button class="btn content" id="button" onclick="showCode()">Show code</button>
+
+        <!-- HTML generated using hilite.me -->
+        <div class="block" id="codeBlock"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">@keyframes</span> slideIn {
+    from {<span style="color: #0000ff">left</span>: -150%;}
+    to   {<span style="color: #0000ff">left</span>: 0%;}
+}
+
+<span style="color: #0000ff">@keyframes</span> fadeIn {
+    from {<span style="color: #0000ff">opacity</span>: 0;}
+    to   {<span style="color: #0000ff">opacity</span>: .75;}
+}
+<span style="color: #2b91af">.title</span>{
+    <span style="color: #0000ff">position</span>: <span style="color: #0000ff">relative</span>;
+    <span style="color: #0000ff">font-size</span>: 36px;
+    <span style="color: #0000ff">text-align</span>: <span style="color: #0000ff">center</span>;
+    <span style="color: #0000ff">font-weight</span>: 900;
+    <span style="color: #0000ff">margin</span>: 15px 0;
+    <span style="color: #0000ff">color</span>: white;
+    <span style="color: #0000ff">left</span>: -150%;
+
+    animation: slideIn 0.5s 0.5s forwards cubic-bezier(.5, .5, .5, 1.3);
+}
+<span style="color: #2b91af">.content</span>{
+    <span style="color: #0000ff">position</span>: <span style="color: #0000ff">relative</span>;
+    <span style="color: #0000ff">color</span>: black;
+    <span style="color: #0000ff">font-weight</span>: <span style="color: #0000ff">bold</span>;
+    <span style="color: #0000ff">font-size</span>: 18px;
+    <span style="color: #0000ff">margin</span>: 15px 0;
+    <span style="color: #0000ff">opacity</span>: 0;
+    
+    animation: fadeIn 2.5s ease 1s <span style="color: #0000ff">normal</span> forwards 1;
+</pre>
+
+        </div>
+        <div id="list">
+            <p class="shorthand">animation: fadeIn 2.5s ease 1s 1 normal forwards</p>
+            <ul>
+                <li>animation-name</li>
+                <li>animation-duration</li>
+                <li>animation-timing-function</li>
+                <li>animation-delay</li>
+                <li>animation-iteration-count</li>
+                <li>animation-direction</li>
+                <li>animation-fill-mode</li>
+                <li>animation-play-state</li>
+            </ul>
+        </div>
+    </main>
+    <script src="animations.js"></script>
+
+</body>
+
+</html>
