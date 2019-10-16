@@ -80,7 +80,6 @@ li {
     font-size: 24px;
 }
 .is-visible{
-    opacity: 0;
     animation: fadeIn 0.8s ease 0s normal forwards 1;
 }
 .is-hidden{
