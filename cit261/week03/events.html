@@ -11,10 +11,20 @@
 
 <body onload="alertOnLoad()">
     <h3>Standard JavaScript Events</h3>
-    <button type="button" onclick="displayImage()">Click to Trigger Event</button>
-        <img src="images/lubbock.jpg" id="image" alt="Lubbock Texas Temple">
-    <p>On the next example, to trigger the event, you can either click the button on the phone or touch the square using a touchscreen
-        device</p>
+    <p class="content">Clicking the button executes an onclick event that toggles an images' classlist. When the button is clicked once
+        a
+        show-image class is added to the picture which has the property of display: block. When it's clicked again that
+        class is toggled off causing the image to be hidden again.</p>
+    
+    <button type="button" class="btn" onclick="displayImage()">Toggle Image</button>
+    <img src="images/lubbock.jpg" id="image" class="image" alt="Lubbock Texas Temple">
+    <p class="content">If the image is currently being displayed there are "mouseover" and "mouseleave" event listeners that will
+             enlarge the image and shrink it back to its original size respectively. </p>
+    
+    <p class="content">On the next example, to trigger the event, you can either click the button on the phone or touch the square using
+        a touchscreen
+        device. The yellow square has a "touchstart" event listener which fires a moveSquare function which causes the
+        animation to occur. The button an onclick event attached to it which also calls the moveSquare function. </p>
 
     <div id="mobile-edge">
 

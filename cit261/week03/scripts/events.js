@@ -3,7 +3,9 @@ function alertOnLoad() {
 }
 //show temple image
 function displayImage() {
-    document.getElementById("image").style.display = "block";
+    var image = document.getElementById("image");
+    image.classList.toggle("show-image");
+    
 }
 //make image bigger/smaller
 var getImage = document.getElementById("image");

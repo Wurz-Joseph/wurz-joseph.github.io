@@ -15,9 +15,12 @@ button {
     font-weight: bold;
 }
 
-#image {
-    width: 60%;
+.image {
     display: none;
+}
+.show-image{
+    display: block;
+    width: 60%;
     margin: 50px auto;
     border-radius: 5px;
 }
@@ -54,6 +57,11 @@ button {
     height: 50px;
     background-color: yellow;
 }
-p{
-    margin: 10% 5% 0 5%;
+.content{
+    text-align: left;
+    margin: 5%;
+    background-color: rgb(243, 68, 4);
+    color: white;
+    padding: 5%;
+    border-radius: 5px;
 }
