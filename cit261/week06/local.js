@@ -16,7 +16,7 @@ function fetchData(){
     " and my favorite sport is " + sport;
 };
 
-//setTimeout(fetchData, 5000);
+setTimeout(fetchData, 5000);
 
 
 
