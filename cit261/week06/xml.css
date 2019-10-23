@@ -1,5 +1,5 @@
 body{
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     background-color: rgba(5, 22, 90, 1);
@@ -9,7 +9,6 @@ main{
     background-color: #FFFFF0;
     padding: 5%;
     margin: 2%;
-    height: 100%;
 }
 
 table, td, th {
