@@ -10,7 +10,7 @@ function loadData() {
 
     let txt = "";
     for (let i = 0; i < obj1.data.length; i++) {
-        txt = obj1.data[i].last_name;
+        txt = obj1.data[i].first_name;
 
         let table = document.getElementById("get-table");
 
@@ -19,7 +19,7 @@ function loadData() {
         newCell.innerHTML = txt;
 
     }
-    
+
 }
 
 xhr1.send();
