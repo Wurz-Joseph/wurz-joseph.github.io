@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMLHTTP request</title>
+    <link rel="stylesheet" href="xml.css">
+</head>
+
+<body>
+    <main>
+        <h1>XMLHTTP Request</h1>
+        <p class="content">
+            "Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having
+            to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the
+            user is doing. XMLHttpRequest is used heavily in AJAX programming."<br>
+            -MDN
+        </p>
+        <p class="content">The following code block shows the basic code required in order to make an http
+            request to consume a data. Despite it's name, XMLHTTPRequest's can be used to retrieve any type of data, not
+            just XML. In this example I use it to retrieve JSON data from a test API.</p>
+        <!-- HTML generated using hilite.me -->
+        <div class="code-block"
+            style="background: #f0f0f0; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #062873; font-weight: bold">const</span> <span style="color: #062873; font-weight: bold">xhr</span> <span style="color: #666666">=</span> <span style="color: #062873; font-weight: bold">new</span> <span style="color: #062873; font-weight: bold">XMLHttpRequest</span><span style="color: #666666">();</span>
+
+<span style="color: #062873; font-weight: bold">xhr</span><span style="color: #0e84b5; font-weight: bold">.open</span><span style="color: #666666">(</span><span style="color: #4070a0">&quot;GET&quot;</span><span style="color: #666666">,</span> <span style="color: #062873; font-weight: bold">url</span><span style="color: #666666">,</span> <span style="color: #062873; font-weight: bold">true</span><span style="color: #666666">);</span>
+
+<span style="color: #062873; font-weight: bold">xhr</span><span style="color: #0e84b5; font-weight: bold">.send</span><span style="color: #666666">();</span>
+</pre>
+        </div>
+
+        <button type="button" onclick="loadData()">Load Data</button>
+        <table id="get-table">
+            <tr>
+                <th id="header">Object Values</th>
+            </tr>
+        </table>
+
+        <p class="content">In the next section I use a setTimeout method to call a function after 5 seconds.
+            Hypothetically, you could
+            use something similar like setInterval to make a call to an API after a specified period of time and update
+            the
+            content asynchronously.</p>
+        <h3>Load Local JSON Below</h3>
+        <div id="local"></div>
+    </main>
+    <script type="text/javascript" src="xml.js"></script>
+    <script type="text/javascript" src="local.js"></script>
+</body>
+
+</html>
