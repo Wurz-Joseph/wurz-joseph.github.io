@@ -1,0 +1,87 @@
+body{
+    background-color: lightblue;
+    overflow-x: hidden;
+}
+.heading{
+    text-align: center;
+    color: blue;
+    font-family: 'Stoke', serif;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.cloud1{
+    position: absolute;
+    animation-name: cloud1;
+    animation-duration: 20s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: scale(2, 1.2);
+}
+.cloud2{
+    position: absolute;
+    top: 200px;
+    left: -160%;
+    animation-name: cloud2;
+    animation-duration: 21s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: scaleX(2);
+    animation-delay: 2s;
+    
+}
+.cloud3{
+    position: absolute;
+    top: 20px;
+    animation-name: cloud3;
+    animation-duration: 30s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.content{
+    position: relative;
+    background-color: lightgray;
+    border:2px solid blue;
+    width: 95vw;
+    margin: auto;
+    z-index: 1;
+    box-shadow: -6px 12px 27px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    top: 50px;
+
+}
+p{
+    margin: 15px;
+}
+
+@keyframes cloud1{
+    from{
+        transform: translate(-100%);
+    } 
+    to {
+        transform: translate(120%) skew(50deg);
+
+    }
+}
+
+@keyframes cloud2{
+    from{
+        transform: translate(-70%);
+    }
+    to {
+        transform: translate(200%)skewY(20deg);
+
+    }
+}
+@keyframes cloud3{
+    from{
+        transform: translate(-150%);
+    }
+    to {
+        transform: translate(110vw) rotate(5deg);
+        opacity: .1;
+
+    }
+}
+
