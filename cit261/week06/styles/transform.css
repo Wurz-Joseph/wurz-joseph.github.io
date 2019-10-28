@@ -20,7 +20,6 @@ body{
 .cloud2{
     position: absolute;
     top: 200px;
-    left: -160%;
     animation-name: cloud2;
     animation-duration: 21s; 
     animation-iteration-count: infinite;
