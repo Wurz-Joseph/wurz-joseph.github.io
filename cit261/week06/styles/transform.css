@@ -1,86 +1,100 @@
-body{
+body {
     background-color: lightblue;
     overflow-x: hidden;
 }
-.heading{
+
+.heading {
     text-align: center;
-    color: blue;
-    font-family: 'Stoke', serif;
-    font-size: 1.75rem;
-    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    
+    color: #fff;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
-.cloud1{
+.cloud1 {
     position: absolute;
     animation-name: cloud1;
-    animation-duration: 20s; 
+    animation-duration: 25s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform: scale(2, 1.2);
 }
-.cloud2{
+
+.cloud2 {
     position: absolute;
     top: 200px;
     animation-name: cloud2;
-    animation-duration: 21s; 
+    animation-duration: 21s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    transform: scaleX(2);
-    animation-delay: 2s;
-    
+    transform: scaleX(1.5);
 }
-.cloud3{
+
+.cloud3 {
     position: absolute;
     top: 20px;
     animation-name: cloud3;
-    animation-duration: 30s; 
+    animation-duration: 35s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-
 }
 
-.content{
+span{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+ul{
+    margin: 20px;
+    padding: 0;
+    font-size: 1.1rem;
+    list-style-type: none;
+   
+}
+
+li{
+    margin: 15px 0;
+}
+h3 {
+    text-align: center;
+}
+
+section {
     position: relative;
     background-color: lightgray;
-    border:2px solid blue;
+    border: 2px solid blue;
     width: 95vw;
     margin: auto;
     z-index: 1;
-    box-shadow: -6px 12px 27px 0px rgba(0,0,0,0.75);
+    box-shadow: -6px 12px 27px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
     top: 50px;
-
-}
-p{
-    margin: 15px;
+    opacity: .8;
 }
 
-@keyframes cloud1{
-    from{
+@keyframes cloud1 {
+    from {
         transform: translate(-100%);
-    } 
+    }
     to {
-        transform: translate(120%) skew(50deg);
-
+        transform: translate(120%) skew(65deg) rotateZ(20deg);
     }
 }
 
-@keyframes cloud2{
-    from{
-        transform: translate(-70%);
+@keyframes cloud2 {
+    from {
+        transform: translate(-120%);
     }
     to {
         transform: translate(200%)skewY(20deg);
-
     }
 }
-@keyframes cloud3{
-    from{
+
+@keyframes cloud3 {
+    from {
         transform: translate(-150%);
     }
     to {
         transform: translate(110vw) rotate(5deg);
-        opacity: .1;
-
     }
 }
-
