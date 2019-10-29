@@ -2,7 +2,11 @@ body{
     background-color: lightblue;
     overflow: hidden;
 }
-
+main{
+    height: 100vw;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
 
 .heading {
     text-align: center;
