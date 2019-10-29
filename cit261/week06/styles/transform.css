@@ -3,9 +3,8 @@ body{
     overflow: hidden;
 }
 main{
-    height: 100vw;
-    overflow-x: hidden;
-    overflow-y: visible;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .heading {
