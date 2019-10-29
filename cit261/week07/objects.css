@@ -1,6 +1,9 @@
 @media only screen and (min-width: 800px) {
     body {
         background-image: url('fall.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+
     }
     .wrapper{
         border-radius: 10px;
