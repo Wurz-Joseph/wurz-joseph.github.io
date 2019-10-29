@@ -1,8 +1,8 @@
-body {
-    background-color: lightblue;
-}
-main{
+html{
     overflow: hidden;
+}
+body{
+    background-color: lightblue;
 }
 
 .heading {
@@ -68,7 +68,7 @@ section {
     border: 2px solid blue;
     width: 95vw;
     margin: auto;
-    z-index: 1;
+    z-index: 10;
     box-shadow: -6px 12px 27px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
     top: 50px;
