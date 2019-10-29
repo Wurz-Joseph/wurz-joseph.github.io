@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Objects</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="objects.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="heading">JavaScript Objects</h1>
+        <p class="desc"> "An object is a collection of properties, and a property is an association between a name (or
+            key) and a value. A property's value can be a function, in which case the property is known as a method. In
+            addition to objects that are predefined in the browser, you can define your own objects."<br>-MDN</p>
+        <!-- HTML generated using hilite.me -->
+        <div class="code-block"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid #CC7E00;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%">//<span style="color: #1e90ff; font-weight: bold">base</span> <span style="color: #1e90ff; font-weight: bold">class</span>
+<span style="color: #1e90ff; font-weight: bold">class</span> <span style="color: #1e90ff; font-weight: bold">User</span> {
+
+    constructor(fName, lName, username) <span style="color: #FF0000; background-color: #FFAAAA">{</span>
+        this.fName = fName;
+        this.lName = lName;
+        this.username = username;
+    }
+
+    //<span style="color: #1e90ff; font-weight: bold">method</span> <span style="color: #1e90ff; font-weight: bold">to</span> <span style="color: #1e90ff; font-weight: bold">generate</span> <span style="color: #1e90ff; font-weight: bold">email</span> <span style="color: #1e90ff; font-weight: bold">depending</span> <span style="color: #1e90ff; font-weight: bold">on</span> <span style="color: #1e90ff; font-weight: bold">object</span> <span style="color: #1e90ff; font-weight: bold">properties</span> <span style="color: #1e90ff; font-weight: bold">values</span>.
+    <span style="color: #1e90ff; font-weight: bold">generateEmail</span>() {
+        let email = this.fName + <span style="color: #aa5500">&#39;.&#39;</span> + this.lName + <span style="color: #aa5500">&#39;@byu.edu&#39;</span>;
+        console.log(<span style="color: #aa5500">&#39;The email for &#39;</span> + this.fName + <span style="color: #aa5500">&#39; is &#39;</span> + email);
+        return email;
+    }
+<span style="color: #FF0000; background-color: #FFAAAA">}</span>
+
+
+//<span style="color: #1e90ff; font-weight: bold">Student</span> <span style="color: #1e90ff; font-weight: bold">is</span> <span style="color: #1e90ff; font-weight: bold">a</span> <span style="color: #1e90ff; font-weight: bold">subclass</span> <span style="color: #1e90ff; font-weight: bold">of</span> <span style="color: #1e90ff; font-weight: bold">User</span>
+<span style="color: #1e90ff; font-weight: bold">class</span> <span style="color: #1e90ff; font-weight: bold">Student</span> <span style="color: #1e90ff; font-weight: bold">extends</span> <span style="color: #1e90ff; font-weight: bold">User</span> {
+
+    constructor(fName, lName, username, iNumber) <span style="color: #FF0000; background-color: #FFAAAA">{</span>
+        <span style="color: #0000aa">super</span>(fName, lName, username);
+        this.iNumber = iNumber;
+    }
+
+<span style="color: #FF0000; background-color: #FFAAAA">}</span>
+
+//<span style="color: #1e90ff; font-weight: bold">intantiate</span> <span style="color: #1e90ff; font-weight: bold">new</span> <span style="color: #1e90ff; font-weight: bold">objects</span>
+<span style="color: #1e90ff; font-weight: bold">let</span> <span style="color: #1e90ff; font-weight: bold">user1</span> = <span style="color: #1e90ff; font-weight: bold">new</span> <span style="color: #1e90ff; font-weight: bold">User</span>(<span style="color: #aa5500">&#39;tom&#39;</span>, <span style="color: #aa5500">&#39;brady&#39;</span>, <span style="color: #aa5500">&#39;tb12&#39;</span>);
+<span style="color: #1e90ff; font-weight: bold">let</span> <span style="color: #1e90ff; font-weight: bold">student1</span> = <span style="color: #1e90ff; font-weight: bold">new</span> <span style="color: #1e90ff; font-weight: bold">Student</span>(<span style="color: #aa5500">&#39;joseph&#39;</span>, <span style="color: #aa5500">&#39;wurz&#39;</span>, <span style="color: #aa5500">&#39;jwurz&#39;</span>, <span style="color: #1e90ff; font-weight: bold">11111111</span>);
+<span style="color: #1e90ff; font-weight: bold">let</span> <span style="color: #1e90ff; font-weight: bold">student2</span> = <span style="color: #1e90ff; font-weight: bold">new</span> <span style="color: #1e90ff; font-weight: bold">Student</span>(<span style="color: #aa5500">&#39;paul&#39;</span>, <span style="color: #aa5500">&#39;bunyan&#39;</span>, <span style="color: #aa5500">&#39;pbuns&#39;</span>, <span style="color: #1e90ff; font-weight: bold">63636363</span>);
+</pre>
+        </div>
+
+    </div>
+
+
+    <script src="Objects.js"></script>
+</body>
+
+</html>
