@@ -26,7 +26,7 @@ class Student extends User {
 
 }
 
-//intantiate new objects
+//instantiate new objects
 let user1 = new User('tom', 'brady', 'tb12');
 let student1 = new Student('joseph', 'wurz', 'jwurz', 11111111);
 let student2 = new Student('paul', 'bunyan', 'pbuns', 63636363);
