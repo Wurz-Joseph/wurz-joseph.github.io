@@ -37,9 +37,7 @@ let txt3 = document.getElementById('text3').classList;
 let txt4 = document.getElementById('text4').classList;
 
 function displayFirst() {
-    if (localStorage == undefined) {
-        alert("Fill in the form first")
-    } else {
+  
         document.getElementById('name1').textContent = localStorage.getItem('name');
         document.getElementById('adj1').textContent = localStorage.getItem('adj');
         document.getElementById('noun1').textContent = localStorage.getItem('noun1');
@@ -50,7 +48,6 @@ function displayFirst() {
         txt4.add('hide');
     }
 
-}
 
 function displaySecond() {
     document.getElementById('name2').textContent = localStorage.getItem('name');
