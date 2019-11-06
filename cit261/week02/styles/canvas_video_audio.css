@@ -15,9 +15,14 @@ h3 {
     font-size: 2em;
     margin: 0;
 }
+.list>h3{
+    margin-top: 10px;
+    font-size: 1.5em;
+}
 
 canvas {
-    background-color: black;
+    background-color: white;
+    margin-top: 20px;
 }
 
 canvas, video, audio {
@@ -26,4 +31,12 @@ canvas, video, audio {
 
 p {
     font-size: 14px
+}
+div.list{
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+    list-style-position: outside;
+    text-align: left;
+    font-weight: bold;
 }
