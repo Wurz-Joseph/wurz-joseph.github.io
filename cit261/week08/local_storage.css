@@ -23,6 +23,7 @@ input{
     margin: 20px auto;
     display: block;
     width: 80%;
+    height: 20px;
 }
 .btns{
     justify-content: center;
@@ -59,11 +60,14 @@ a{
   width: 80%;
   display: block;
   margin: 10px auto;
-  padding: 5px;
-  border: 1px solid black;
+  padding: 10px;
   text-decoration: none;
   color: white;
   background-color: navy;
+}
+a:hover{
+    box-shadow: 3px 1px 10px 1px rgba(0,0,0,0.75);
+
 }
 .section{
     border: 2px groove;
@@ -79,4 +83,9 @@ p{
     margin: auto;
     font-family: 'Yeon Sung', cursive;
     font-weight: 900;
+}
+.output{
+    text-align: center;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 1.2em;
 }

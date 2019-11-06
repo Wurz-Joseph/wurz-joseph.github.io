@@ -12,49 +12,50 @@
 
 <body>
 
-
-    <div class="hide" id="text1">
-        Please excuse <span id="name1"></span>, who is far too <span id="adj1"></span> to attend <span
-            id="noun1"></span>
-        class.
-    </div>
-    <div class="hide" id="text2">
-        <span id="name2"></span> is sick with the <span id="bodyPart"></span> flu. Drink more <span id="fluid"></span>
-        and take <span id="substance"></span> as needed.
-    </div>
-    <div class="hide" id="text3">
-        <span id="name3"></span> is authorized to be at <span id="place"></span> instead of <span id="noun2"></span>
-        class.
-    </div>
-    <div class="hide" id="text4">
-        <span id="name4"></span> is too cool for <span id="noun3"></span> class. Instead, she/he will be attending the
-        <span id="event"></span>
-        class.
-    </div>
-    <div class="section">
+    <div class="output">
         
-            <form>
-                <h3>Fill in the blanks</h3>
-                <input id="inName" type="text" placeholder="NAME...">
-                <input id="inNoun1" type="text" placeholder="NOUN...">
-                <input id="inNoun2" type="text" placeholder="NOUN...">
-                <input id="inBody" type="text" placeholder="PART OF THE BODY...">
-                <input id="inFluid" type="text" placeholder="TYPE OF FLUID...">
-                <input id="inAdj" type="text" placeholder="ADJECTIVE...">
-                <input id="inSubstance" type="text" placeholder="A SUBSTANCE...">
-                <input id="inPlace" type="text" placeholder="A PLACE...">
-                <input id="inEvent" type="text" placeholder="AN EVENT...">
-                <input id="inNoun3" type="text" placeholder="NOUN...">
-
-                <div class="btns">
-                    <button id="submitWords">submit Words</button>
-                    <button id="clearStorage">Clear Storage</button>
-                </div>
-            </form>
-
+        <div class="hide" id="text1">
+            Please excuse <span id="name1"></span>, who is far too <span id="adj1"></span> to attend <span
+                id="noun1"></span>
+            class.
+        </div>
+        <div class="hide" id="text2">
+            <span id="name2"></span> is sick with the <span id="bodyPart"></span> flu. Drink more <span
+                id="fluid"></span>
+            and take <span id="substance"></span> as needed.
+        </div>
+        <div class="hide" id="text3">
+            <span id="name3"></span> is authorized to be at <span id="place"></span> instead of <span id="noun2"></span>
+            class.
+        </div>
+        <div class="hide" id="text4">
+            <span id="name4"></span> is too cool for <span id="noun3"></span> class. Instead, she/he will be attending
+            the
+            <span id="event"></span>
+            class.
+        </div>
     </div>
     <div class="section">
-        <h4>Click a button below to Generate MadLib using your words.</h4>
+
+        <form>
+            <h3>Fill in the blanks</h3>
+            <input id="inName" type="text" placeholder="NAME...">
+            <input id="inNoun1" type="text" placeholder="NOUN...">
+            <input id="inNoun2" type="text" placeholder="NOUN...">
+            <input id="inBody" type="text" placeholder="PART OF THE BODY...">
+            <input id="inFluid" type="text" placeholder="TYPE OF FLUID...">
+            <input id="inAdj" type="text" placeholder="ADJECTIVE...">
+            <input id="inSubstance" type="text" placeholder="A SUBSTANCE...">
+            <input id="inPlace" type="text" placeholder="A PLACE...">
+            <input id="inEvent" type="text" placeholder="AN EVENT...">
+            <input id="inNoun3" type="text" placeholder="NOUN...">
+
+            <div class="btns">
+                <button id="submitWords">submit Words</button>
+                <button id="clearStorage">Clear Words</button>
+            </div>
+        </form>
+        <h4>Now select a option below to Generate MadLib using your words.</h4>
         <a onclick="displayFirst()" href="#">Excused from class</a>
         <a onclick="displaySecond()" href="#">Doctors Instructions</a>
         <a onclick="displayThird()" href="#">Authorized to be elsewhere</a>

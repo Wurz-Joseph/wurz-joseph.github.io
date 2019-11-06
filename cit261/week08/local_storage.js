@@ -23,6 +23,8 @@ submitWords.onclick = function () {
     localStorage.setItem("event", event.value);
     localStorage.setItem("noun3", noun3.value);
 
+    document.forms[0].reset();
+
 };
 
 clearStorage.onclick = function () {
