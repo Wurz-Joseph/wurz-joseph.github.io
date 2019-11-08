@@ -6,6 +6,7 @@ var grd = ctx.createLinearGradient(0, 0, 350, 0);
 grd.addColorStop(0, "red");
 grd.addColorStop(1, "white");
 
+
 // Fill with gradient
 ctx.fillStyle = grd;
 ctx.fillRect(0, 0, 350, 196);
@@ -13,4 +14,4 @@ ctx.fillRect(0, 0, 350, 196);
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "blue";
-ctx.fillRect(0, 0, 150, 90);
+ctx.fillRect(10, 10, 100, 100);
