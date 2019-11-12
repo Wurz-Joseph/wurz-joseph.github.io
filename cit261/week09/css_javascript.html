@@ -11,33 +11,50 @@
 
 <body>
     <h1 class="header">Changing CSS Properties Using JavaScript</h1>
+    <div class="section info">
+        <p>"The HTMLElement.style property is used to get as well as set the inline style of an element. When getting, it
+            returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with
+            values assigned for the attributes that are defined in the element's inline style attribute."<br><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">-MDN web docs</a></p>
+    </div>
     <div class="section">
-    <div class="one">ONE</div>
-    <p>This code is used to specify only one CSS property at a time.</p>
-    <!-- HTML generated using hilite.me --><div class="codeblock" style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//div one</span>
+        <div class="one">ONE</div>
+        <p>This code is used to specify only one CSS property at a time.</p>
+        <!-- HTML generated using hilite.me -->
+        <div class="codeblock"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//div one</span>
 <span style="color: #00aaaa">document</span>.querySelector(<span style="color: #aa5500">&quot;.one&quot;</span>).style.color = <span style="color: #aa5500">&quot;blue&quot;</span>;
 <span style="color: #00aaaa">document</span>.querySelector(<span style="color: #aa5500">&quot;.one&quot;</span>).style.backgroundColor = <span style="color: #aa5500">&quot;gray&quot;</span>;
-</pre></div>
-</div>
-<div class="section">
-    <div class="two">TWO</div>
-    <p>This code block gives an example of specifying multiple properties at once.</p>
-    <!-- HTML generated using hilite.me --><div class="codeblock" style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//div two</span>
+</pre>
+        </div>
+    </div>
+    <div class="section">
+        <div class="two">TWO</div>
+        <p>This code block gives an example of specifying multiple properties at once.</p>
+        <!-- HTML generated using hilite.me -->
+        <div class="codeblock"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//div two</span>
 <span style="color: #00aaaa">document</span>.querySelector(<span style="color: #aa5500">&quot;.two&quot;</span>).style.cssText = <span style="color: #aa5500">&quot;color: white; background-color: orange; font-size: 2em; border-radius: 15px;&quot;</span>;
-</pre></div>
-</div>
-<div class="section">
-    <div class="three">THREE</div>
-    <p>This is an example of changing the CSS property with an event listener.</p>
-    <button id="btn" type="button">Change Style</button>
-    <!-- HTML generated using hilite.me --><div class="codeblock"style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//div three</span>
+</pre>
+        </div>
+    </div>
+    <div class="section">
+        <div class="three">THREE</div>
+        <p>This is an example of changing the CSS property with an event listener.</p>
+        <button id="btn" type="button">Change Style</button>
+        <!-- HTML generated using hilite.me -->
+        <div class="codeblock"
+            style="background: #ffffff; overflow:auto;width:auto;border:solid black;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//div three</span>
 btn.onclick = <span style="color: #0000aa">function</span> () {
     <span style="color: #00aaaa">document</span>.querySelector(<span style="color: #aa5500">&quot;.three&quot;</span>).style.cssText = <span style="color: #aa5500">&quot;color: white; background-color: red; width: 50px; border-radius: 50%;&quot;</span>
 }
-</pre></div>
-</div>
+</pre>
+        </div>
+    </div>
 
-    
+
     <script src="css_javascript.js"></script>
 </body>
 
