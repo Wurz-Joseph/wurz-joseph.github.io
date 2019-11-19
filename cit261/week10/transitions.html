@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triggering Transitions/Animations</title>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="transitions.css">
+</head>
+
+<body>
+    <h2 class="heading">Transitions Using JavaScript</h2>
+    <p>
+        CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having
+        property
+        changes take effect immediately, you can cause the changes in a property to take place over a period of time.
+        For
+        example, if you change the color of an element from white to black, usually the change is instantaneous. With
+        CSS
+        transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be
+        customized.</p>
+
+    <div class="container" id="container">
+        <div class="circle" id="circle"></div>
+
+    </div>
+    <button type="button" onclick=doTransition()>Start Transition</button>
+<h3>Defining Transitions</h3>
+    <ul>
+        <li><u>transition-property</u> - Specifies the name or names of the CSS properties to which transitions should
+            be
+            applied. Only properties listed here are animated during transitions; changes to all other properties occur
+            instantaneously as usual. </li>
+        <li><u>transition-duration</u> - Specifies the duration over which transitions should occur. You can specify a
+                single duration that applies to all properties during the transition, or multiple values to allow each
+                property to transition over a different period of time.</li>
+        <li><u>transition-timing-function</u> - Specifies a function to define how intermediate values for properties
+            are computed. Timing functions determine how intermediate values of the transition are calculated.</li>
+        <li><u>transition-delay</u> - Defines how long to wait between the time a property is changed and the transition actually begins.</li>
+        <li><u>transition</u> - Shorthand CSS syntax. Is written as follows transition: &lt;property> &lt;duration> &lt;timing-function> &lt;delay>;</li>
+    </ul>
+
+    <script src="transitions.js"></script>
+</body>
+
+</html>
