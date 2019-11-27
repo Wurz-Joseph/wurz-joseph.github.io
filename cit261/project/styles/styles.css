@@ -42,7 +42,7 @@ body.wrong {
 
 .container{
     width: 800px;
-    max-width: 80%;
+    max-width: 90%;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
@@ -61,7 +61,7 @@ body.wrong {
     border: 1px solid hsl(var(--hue) 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     color: white;
     outline: none;
 }

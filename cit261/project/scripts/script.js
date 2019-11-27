@@ -20,8 +20,6 @@ function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     
-    
-
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
@@ -46,6 +44,7 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button);
     })
 }
+
 
 function resetState() {
     clearStatusClass(document.body);
@@ -78,6 +77,7 @@ function setStatusClass(element, correct) {
 
     } else {
         element.classList.add('wrong');
+        document.getElementsByClassName('correct').disabled = true;
     }
     
 }
