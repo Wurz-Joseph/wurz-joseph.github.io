@@ -1,183 +1,72 @@
-
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
+const restartButton = document.getElementById('restart-btn');
+const newQuizButton = document.getElementById('new-quiz');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
-const answerButtonsElement = document.getElementById('answer-buttons');
+const answerButtons1 = document.getElementById('answer-buttons1');
+const answerButtons2 = document.getElementById('answer-buttons2');
+const answerButtons3 = document.getElementById('answer-buttons3');
+const answerButtons4 = document.getElementById('answer-buttons4');
+const answerButtons5 = document.getElementById('answer-buttons5');
 
-let shuffledQuestions, currentQuestionIndex;
+let questionIndex;
+let questions = [];
+let correctAnswer = [];
+let incorrectAnswers = {};
+// let q1Wrong = [];
+// let q2Wrong = [];
+// let q3Wrong = [];
+// let q4Wrong = [];
+// let q5Wrong = [];
+/********************API Call*****************/
 
+onload = async function getQuiz() {
+    const response = await fetch("https://opentdb.com/api.php?amount=5&category=21&type=multiple");
+    const data = await response.json();
 
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
-    setNextQuestion();
+    for (let i = 0; i < data.results.length; i++) {
+        questions.push(data.results[i].question);
+        correctAnswer.push(data.results[i].correct_answer);
+        for(let j=0; j < data.results[i].incorrect_answers.length; j++){
+            incorrectAnswers[i]["question" + i] = data.results[i].incorrect_answers;
+        }
+        
+    }
+    //store the wrong answers in variables
+    // q1Wrong.push(data.results[0].incorrect_answers);
+    // q2Wrong.push(data.results[1].incorrect_answers);
+    // q3Wrong.push(data.results[2].incorrect_answers);
+    // q4Wrong.push(data.results[3].incorrect_answers);
+    // q5Wrong.push(data.results[4].incorrect_answers);
 
-})
+}
 
-function startGame() {
-    getQuiz();
-    startButton.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
-    
-    currentQuestionIndex = 0;
+function startQuiz() {
+    questionIndex = 0;
+    questionElement.innerHTML = questions[questionIndex];
     questionContainerElement.classList.remove('hide');
-    setNextQuestion();
+    startButton.classList.add('hide');
+    nextButton.classList.remove('hide');
+    restartButton.classList.add('hide');
+    newQuizButton.classList.add('hide');
 }
 
 function setNextQuestion() {
-    resetState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+    questionIndex++;
 
-}
-
-function showQuestion(question) {
-    questionElement.innerHTML = question.question;
-    question.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerHTML = answer.text;
-        button.classList.add('btn');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-        answerButtonsElement.appendChild(button);
-    })
-}
-
-
-function resetState() {
-    clearStatusClass(document.body);
-    nextButton.classList.add('hide');
-
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-    }
-}
-
-function selectAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
-    setStatusClass(document.body, correct);
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide');
+    if (questionIndex + 1 > questions.length) {
+        nextButton.classList.add('hide');
+        restartButton.classList.remove('hide');
+        newQuizButton.classList.remove('hide');
     } else {
-        startButton.innerText = 'Take Another Quiz';
-        startButton.classList.remove('hide');
+        questionElement.innerHTML = questions[questionIndex];
     }
 }
 
-function setStatusClass(element, correct) {
-    clearStatusClass(element);
-    if (correct) {
-        element.classList.add('correct');
-
-    } else {
-        element.classList.add('wrong');
-        document.getElementsByClassName('correct').disabled = true;
-    }
-    
+function newQuiz() {
+    location.reload();
 }
 
-function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
-}
 
-//Trivia Questions
 
-const questions = [
-    {
-        question: localStorage.getItem('q1'),
-        answers: [
-            { text: localStorage.getItem('q1Wrong1'), correct: false },
-            { text: localStorage.getItem('q1Correct'), correct: true },
-            { text: localStorage.getItem('q1Wrong2'), correct: false },
-            { text: localStorage.getItem('q1Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q2'),
-        answers: [
-            { text: localStorage.getItem('q2Wrong1'), correct: false},
-            { text: localStorage.getItem('q2Correct'), correct: true },
-            { text: localStorage.getItem('q2Wrong2'), correct: false },
-            { text: localStorage.getItem('q2Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q3'),
-        answers: [
-            { text: localStorage.getItem('q3Wrong1'), correct: false },
-            { text: localStorage.getItem('q3Wrong2'), correct: false },
-            { text: localStorage.getItem('q3Correct'), correct: true },
-            { text: localStorage.getItem('q3Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q4'),
-        answers: [
-            { text: localStorage.getItem('q4Correct'), correct: true },
-            { text: localStorage.getItem('q4Wrong1'), correct: false },
-            { text: localStorage.getItem('q4Wrong2'), correct: false },
-            { text: localStorage.getItem('q4Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q5'),
-        answers: [
-            { text: localStorage.getItem('q5Correct'), correct: true },
-            { text: localStorage.getItem('q5Wrong1'), correct: false },
-            { text: localStorage.getItem('q5Wrong2'), correct: false },
-            { text: localStorage.getItem('q5Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q6'),
-        answers: [
-            { text: localStorage.getItem('q6Wrong1'), correct: false },
-            { text: localStorage.getItem('q6Wrong2'), correct: false },
-            { text: localStorage.getItem('q6Correct'), correct: true },
-            { text: localStorage.getItem('q6Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q7'),
-        answers: [
-            { text: localStorage.getItem('q7Wrong1'), correct: false },
-            { text: localStorage.getItem('q7Correct'), correct: true },
-            { text: localStorage.getItem('q7Wrong2'), correct: false },
-            { text: localStorage.getItem('q7Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q8'),
-        answers: [
-            { text: localStorage.getItem('q8Wrong1'), correct: false },
-            { text: localStorage.getItem('q8Correct'), correct: true },
-            { text: localStorage.getItem('q8Wrong2'), correct: false },
-            { text: localStorage.getItem('q8Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q9'),
-        answers: [
-            { text: localStorage.getItem('q9Wrong1'), correct: false },
-            { text: localStorage.getItem('q9Correct'), correct: true },
-            { text: localStorage.getItem('q9Wrong2'), correct: false },
-            { text: localStorage.getItem('q9Wrong3'), correct: false }
-        ]
-    },
-    {
-        question: localStorage.getItem('q10'),
-        answers: [
-            { text: localStorage.getItem('q10Wrong1'), correct: false },
-            { text: localStorage.getItem('q10Wrong2'), correct: false },
-            { text: localStorage.getItem('q10Wrong3'), correct: false},
-            { text: localStorage.getItem('q10Correct'), correct: true }
-        ]
-    }
-]

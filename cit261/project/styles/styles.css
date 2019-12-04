@@ -7,16 +7,6 @@
     --hue-wrong: 0;
     --hue-correct: 145;
 }
-h1{
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5rem;
-    color: white;
-    display: block;
-    position: absolute;
-    top: 100px;
-    z-index: 100;
-    margin: auto;
-}
 
 body{
     --hue: var(--hue-neutral);
@@ -30,6 +20,18 @@ body{
     align-items: center;
     background-color: hsl(var(--hue), 100%, 20%);
 }
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    margin: auto;
+}
+
 
 body.correct {
     --hue: var(--hue-correct);
@@ -79,10 +81,11 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn{
-    font-size: 1.5rem;
+.start-btn, .next-btn, .restart-btn, .new-quiz{
+    font-size: 1.3rem;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    margin: 5px;
 }
 
 .controls{

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="grid">
+        <div id="quiz">
+            <h1>Trivia App</h1>
+            <hr>
+            <p id="question"></p>
+            <div class="buttons">
+                <button id="btn0" class="btn"><span id="choice0"></span></button>
+                <button id="btn1" class="btn"><span id="choice1"></span></button>
+                <button id="btn2" class="btn"><span id="choice2"></span></button>
+                <button id="btn3" class="btn"><span id="choice3"></span></button>
+            </div>
+            <hr>
+            <footer>
+                
+                <p id="progress">Question x of y</p>
+            </footer>
+        </div>
+    </div>
+    <script src="scripts/questions.js" type="module"></script>
+    <script src="scripts/app.js" type="module"></script>
+    <script src="scripts/quiz_controller.js" type="module"></script>
+</body>
+
+</html>
