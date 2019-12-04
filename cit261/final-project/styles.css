@@ -58,6 +58,17 @@ body {
     box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.75);
 }
 
+.btn:active {
+    background-color: #104E8B;
+    transform: scale(1);
+    box-shadow: none;
+    border: 1px solid #1874CD;
+}
+
+.btn:focus {
+    outline: none;
+}
+
 #btn0 {
     left: -150%;
     animation-name: slideIn;
@@ -90,19 +101,8 @@ body {
     animation-delay: 800ms;
 }
 
-#btn4{
+#btn4 {
     width: 60%;
-}
-
-.btn:active {
-    background-color: #104E8B;
-    transform: scale(1);
-    box-shadow: none;
-    border: 1px solid #1874CD;
-}
-
-.btn:focus {
-    outline: none;
 }
 
 #progress {
@@ -122,9 +122,10 @@ body {
     animation-fill-mode: forwards;
 }
 
-.answers{
+.answers {
     text-align: left;
 }
+
 hr {
     margin: 20px 5px 0 5px;
 }
@@ -133,10 +134,12 @@ hr {
     color: black;
     font-size: 1.4rem;
 }
-.answers{
+
+.answers {
     font-size: 1.1rem;
     color: #5a8d03;
 }
+
 footer {
     margin-top: 20px;
 }
