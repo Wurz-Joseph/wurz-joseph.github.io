@@ -69,6 +69,11 @@ onload = async function getQuiz() {
             gameOverHtml += "<h2 class='score'>Previous Attempt: " + localStorage.getItem("grade") + "%</h2>";
         }
 
+        for (let i = 0; i < answer.length; i++) {
+            gameOverHtml += "<p class=answers>Question" + (i + 1) + ": " + answer[i] + "</p>";
+        }
+
+
         let element = document.getElementById('quiz');
         element.innerHTML = gameOverHtml;
         localStorage.setItem("grade", grade);
@@ -80,7 +85,7 @@ onload = async function getQuiz() {
         new Question(questionText[2], [answer[2], choices[6], choices[8], choices[7]], answer[2]),
         new Question(questionText[3], [choices[9], answer[3], choices[11], choices[10]], answer[3]),
         new Question(questionText[4], [choices[12], answer[4], choices[14], choices[13]], answer[4]),
-        new Question(questionText[5], [choices[15], choices[16] , answer[5] , choices[17]], answer[5])
+        new Question(questionText[5], [choices[15], choices[16], answer[5], choices[17]], answer[5])
     ];
 
     let quiz = new Quiz(questions);
