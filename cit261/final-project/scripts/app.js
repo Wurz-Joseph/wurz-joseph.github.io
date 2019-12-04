@@ -2,9 +2,8 @@ import Question from './questions.js';
 import Quiz from './quiz_controller.js';
 
 onload = async function getQuiz() {
-    const response = await fetch("https://opentdb.com/api.php?amount=6&category=21&type=multiple");
+    const response = await fetch("https://opentdb.com/api.php?amount=6&category=18&difficulty=easy&type=multiple");
     const data = await response.json();
-    console.log(data);
 
     let questionText = [];
     let answer = [];
