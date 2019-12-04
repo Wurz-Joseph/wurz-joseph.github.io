@@ -72,11 +72,30 @@ onload = async function getQuiz() {
             gameOverHtml += "<p class=answers>Question" + (i + 1) + ": " + answer[i] + "</p>";
         }
 
+        // gameOverHtml += "<button id='btn4' class='btn' onclick='startOver()'>Play Again</button>";
+
+        // 1. Create the button
+        var button = document.createElement("button");
+        button.innerHTML = "Play Again";
+        button.classList.add('btn');
+
+        // 2. Append somewhere
+        let body = document.getElementsByTagName("div")[0];
+        body.appendChild(button);
+
+        // 3. Add event handler
+        button.addEventListener("click", function () {
+            location.reload();
+        });
 
         let element = document.getElementById('quiz');
         element.innerHTML = gameOverHtml;
         localStorage.setItem("grade", grade);
     }
+
+
+
+
 
     let questions = [
         new Question(questionText[0], [choices[0], answer[0], choices[1], choices[2]], answer[0]),

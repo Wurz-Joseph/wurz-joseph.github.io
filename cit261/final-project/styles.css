@@ -6,6 +6,7 @@ body {
 }
 
 .grid {
+    text-align: center;
     width: 90%;
     height: 100vh;
     margin: 0 auto;
@@ -28,6 +29,7 @@ body {
 }
 
 .grid #question {
+    text-align: left;
     font-family: sans-serif;
     font-size: 1.3rem;
     font-weight: bold;
@@ -43,7 +45,6 @@ body {
 .btn {
     position: relative;
     overflow: hidden;
-    left: -150%;
     background-color: #1874CD;
     width: 80%;
     font-size: 1.2rem;
@@ -58,6 +59,7 @@ body {
 }
 
 #btn0 {
+    left: -150%;
     animation-name: slideIn;
     animation-duration: 100ms;
     animation-fill-mode: forwards;
@@ -65,6 +67,7 @@ body {
 }
 
 #btn1 {
+    left: -150%;
     animation-name: slideIn;
     animation-duration: 100ms;
     animation-fill-mode: forwards;
@@ -72,6 +75,7 @@ body {
 }
 
 #btn2 {
+    left: -150%;
     animation-name: slideIn;
     animation-duration: 100ms;
     animation-fill-mode: forwards;
@@ -79,10 +83,15 @@ body {
 }
 
 #btn3 {
+    left: -150%;
     animation-name: slideIn;
     animation-duration: 100ms;
     animation-fill-mode: forwards;
     animation-delay: 800ms;
+}
+
+#btn4{
+    width: 60%;
 }
 
 .btn:active {
@@ -113,6 +122,9 @@ body {
     animation-fill-mode: forwards;
 }
 
+.answers{
+    text-align: left;
+}
 hr {
     margin: 20px 5px 0 5px;
 }
