@@ -56,8 +56,10 @@ onload = async function getQuiz() {
         element.innerHTML = "Question " + currentNumber + " of " + quiz.questions.length;
     }
 
+    //if quiz has ended show scores page
     function showScores() {
         let gameOverHtml = "<h1>Results</h1>";
+        //calc grade
         let grade = Math.round((quiz.score / quiz.questions.length) * 100);
 
         if (localStorage.getItem("grade") == null) {
@@ -68,18 +70,17 @@ onload = async function getQuiz() {
             gameOverHtml += "<h2 class='score'>Previous Attempt: " + localStorage.getItem("grade") + "%</h2>";
         }
 
+        //show correct answers
         for (let i = 0; i < answer.length; i++) {
             gameOverHtml += "<p class=answers>Question" + (i + 1) + ": " + answer[i] + "</p>";
         }
 
-        // gameOverHtml += "<button id='btn4' class='btn' onclick='startOver()'>Play Again</button>";
-
-        // 1. Create the button
-        var button = document.createElement("button");
+        // 1. Create restart button
+        let button = document.createElement("button");
         button.innerHTML = "Play Again";
         button.classList.add('btn');
 
-        // 2. Append somewhere
+        // 2. Append to div
         let body = document.getElementsByTagName("div")[0];
         body.appendChild(button);
 
@@ -90,12 +91,9 @@ onload = async function getQuiz() {
 
         let element = document.getElementById('quiz');
         element.innerHTML = gameOverHtml;
+        //store quiz grade in local storage
         localStorage.setItem("grade", grade);
     }
-
-
-
-
 
     let questions = [
         new Question(questionText[0], [choices[0], answer[0], choices[1], choices[2]], answer[0]),
@@ -107,10 +105,6 @@ onload = async function getQuiz() {
     ];
 
     let quiz = new Quiz(questions);
-
     populate();
-
-
-
 }
 
