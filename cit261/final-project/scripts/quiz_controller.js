@@ -15,9 +15,14 @@ export default class Quiz {
     guess(answer) {
         if (this.getQuestionIndex().correctAnswer(answer)) {
             this.score++;
+            let header = document.getElementById('header');
+            header.style.backgroundColor = '#5a8d03';
+        }
+        else {
+            header.style.backgroundColor = 'red';
         }
 
-        this.questionIndex++
+        this.questionIndex++;
     }
 
 }

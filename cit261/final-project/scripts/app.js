@@ -44,10 +44,11 @@ onload = async function getQuiz() {
 
     function guess(id, guess) {
         let button = document.getElementById(id);
+
         button.onclick = function () {
             quiz.guess(guess);
             populate();
-        }
+        };
     }
 
     function showProgress() {
@@ -107,4 +108,3 @@ onload = async function getQuiz() {
     let quiz = new Quiz(questions);
     populate();
 }
-
