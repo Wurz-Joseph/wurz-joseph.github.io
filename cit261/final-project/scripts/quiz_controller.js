@@ -19,7 +19,7 @@ export default class Quiz {
             header.style.backgroundColor = '#5a8d03';
         }
         else {
-            header.style.backgroundColor = 'red';
+            header.style.backgroundColor = '#cc0000';
         }
 
         this.questionIndex++;
