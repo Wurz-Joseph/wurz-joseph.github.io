@@ -1,0 +1,40 @@
+<!Doctype HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Can I Sleep?</title>
+<script>
+
+/*Input:There is no user input
+ *Processing: Get day of week, day of the month
+ *and month from computer clock. Use if statement to 
+ *if you should sleep in or wake up.
+ *Output: Text of "sleep in" or "wake up".
+ */
+
+function sleepIn(){
+ 	var now = new Date();
+    var month = now.getMonth();
+    var dayOfMonth = now.getDate();
+    var dayOfWeek = now.getDay();
+	var message;
+
+if (dayOfWeek==0||dayOfWeek==6 || month==0 && dayOfMonth==1 || 
+	month==6 && dayOfMonth==4 || month==11 && dayOfMonth==25) {
+	message = "Sleep in.";
+}
+else {
+	message = "Get Up!";
+}
+
+document.getElementById('outputDiv').innerHTML = message;
+
+}
+</script>
+</head>
+
+<body>
+<button type="button" onclick="sleepIn()">5 More Minutes?</button>
+<div id="outputDiv"></div>
+</body>
+</html>

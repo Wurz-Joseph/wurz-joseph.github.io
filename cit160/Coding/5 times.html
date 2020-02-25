@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Five Times Table</title>	
+	<h1>Five Times Table</h1>
+	
+
+<script>
+/*Input: No user input required
+ *Processing: Increment i 1-12 and multiply by each by 5
+ *Output: 5 times table from 5 x 1 through 5 x 12
+ */
+ function fiveTimes(){
+var text = "";
+var i;
+for (i = 1; i <= 12; i++) {
+    text += "5 x " + i + " = " + (i * 5) + "<br>";
+}
+
+document.getElementById("outputDiv").innerHTML = text;
+}
+</script>
+</head>
+<body>
+<button onclick="fiveTimes()" type="button">Display</button>
+<div id="outputDiv"></div>
+</body>
+</html>

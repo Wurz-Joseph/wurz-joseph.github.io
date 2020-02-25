@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input:Starting # endng # and divisor
+ * Processing: all evenly divisible #s between start and end
+ * Output: All the evenly divisible #s
+ */
+function evenlyDivisible(){
+	var start = parseFloat(document.getElementById('start').value);
+	var end = parseFloat(document.getElementById('end').value);
+	var divisor = parseFloat(document.getElementById('divisor').value);
+	var text = "";
+	var i;
+	
+for (i = start; i <= end; i++){
+if(i % divisor == 0){
+text += i + " ";
+}
+}
+
+document.getElementById('output').innerHTML = text;
+}
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="evenlyDivisible()">Click</button>
+<div id="output"></div>
+</body>
+</html>

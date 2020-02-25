@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Jim and Dwight</title>
+<script>
+/* Defining Table
+ * Input: A type of bear
+ * Processing: reply with correct answer
+ * Output: The correct answer*/
+function askUser() {
+    // This line asks the user what kind of bear is best.
+    var bear = prompt("What kind of bear is best?");
+
+    var answer = "You said" + ' ' + '"' + bear + '"' + " " +
+     "False. Black bear.";
+    // The next line causes the computer to display
+    // the correct answer
+    alert(answer);
+}
+</script>
+</head>
+
+<body>   
+<p>Jim Halpert has a question</p>                                   
+    <button type="button" onclick="askUser()">What's his question?</button>
+</body>
+</html>

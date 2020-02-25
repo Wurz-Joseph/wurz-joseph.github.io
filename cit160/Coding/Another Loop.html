@@ -1,0 +1,30 @@
+<!Doctype HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Another Loop</title>
+<script>	
+/*Input: No user input required
+ *Processing: (2^i)i starts at 1 and ncrements up by 1 to 31
+ *Ouput: all powers of 2 up to 31.
+ */	
+function mathPowers(){
+var text = "";
+var i;
+
+//for loop to increment 2^0 to 2^31 
+for (i = 0; i <= 31; i++) {
+    text += Math.pow(2,i) + ", ";
+}
+
+
+document.getElementById("outputDiv").innerHTML = text;
+}
+</script>
+</head>
+<body>
+<button onclick="mathPowers()" type="button">Display Powers of Two</button>
+<div id="outputDiv"></div>
+
+</body>
+</html>

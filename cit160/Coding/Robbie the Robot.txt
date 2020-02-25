@@ -1,0 +1,14 @@
+moveForward();
+moveForward();
+moveForward();
+turnLeft();
+print("Robbie moonwalk!");
+moveBackward();
+moveBackward();
+moveBackward();
+moveBackward();
+turnRight();
+moveForward();
+moveForward();
+moveForward();
+print("Robbie, the king of robot pop!");

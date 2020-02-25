@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<meta charset="utf-8">
+
+<head>
+<title>Functions With Arrays</title>
+<script type="text/javascript">
+//Function with an even index array.
+function doCalc()
+{
+  var list = [1.8, 2, 3, 4, 5, 6, 7, 8, 9, 10.5];
+
+  var endsums = addEnds(list);
+
+  document.getElementById("output").innerHTML = "endsums = " + endsums; 
+}
+//function to add first and last elements of array in doCalc() function
+function addEnds(list)
+{
+var sum = list[0] + list[list.length-1];
+return sum;
+}
+
+
+</script>
+</head>
+
+<body>
+<button type="button" onclick="doCalc()">Compute Functions</button>
+<div id="output"></div>
+</body>
+
+</html>

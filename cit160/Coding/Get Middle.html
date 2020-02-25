@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<meta charset="utf-8">
+
+<head>
+<title>Functions With Arrays</title>
+<script type="text/javascript">
+
+/* function with an array. Calls getMiddle() function.
+ Outputs middle()*/ 
+function doCalcs()
+{
+var list =   getRandomInt(3,6);
+var middle = getMiddle(list); 
+
+document.getElementById("output").innerHTML += "Middle = " + middle;
+}
+
+/* function to calculate the average of the two middle elements in the array from doCalcs() function */ 
+function getMiddle(list)
+{
+if (list.length % 2 == 0)
+{
+var evenHigh = list[list.length / 2]; //returns middle high #
+var evenLow = list[list.length / 2 - 1]; // returns middle low #
+var evenResult = (evenHigh + evenLow) / 2;	
+return evenResult;
+}
+
+else {
+var oddResult = list[list.length / 2 - .5]
+  return oddResult;
+}
+
+}
+function createRandomIntArray(minLength, maxLength, minValue, maxValue)
+{
+/*
+/ input: the range of acceptable array lengths and the range of acceptable values 
+/ processing: creates an array of random length within the range, filled with random integers within the range
+/ output: the array
+*/
+var randomArray = [];
+var arrayLength = getRandomInt(minLength, maxLength);
+for (var i = 0; i < arrayLength; ++i)
+{
+randomArray[i] = getRandomInt(minValue,maxValue);
+}
+return randomArray;
+}
+</script>
+</head>
+
+<body>
+<button type="button" onclick="doCalcs()">Compute Functions</button>
+<div id="output"></div>
+</body>
+
+</html>

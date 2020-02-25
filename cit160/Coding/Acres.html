@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Conversion</title>
+
+<script>
+	/*input: Width and Length of land in feet.
+	 *processing: width * length / 43,560
+	 *output: Area of land in acres
+	 */
+function feetToAcres (){
+	var width = parseFloat(document.getElementById('widthInputBox').value);
+
+	var length = parseFloat(document.getElementById('lengthInputBox').value);
+
+	var acres = Math.round(width * length / 43560);
+
+
+	document.getElementById('acresDiv').innerHTML = acres + " acres";
+}
+</script>
+</head>
+
+<body>                               
+Enter width: 
+<input type="text" size="5" id="widthInputBox"><br>
+
+Enter length:
+<input type="text" size="5" id="lengthInputBox"><br>
+
+<button type="button" onclick="feetToAcres()">Calculate</button>
+<div id="acresDiv"></div>                     
+</body>            
+</html>

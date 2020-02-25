@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Arithmetic</title>
+<script>
+/* Input: An arithmetic operation
+ * Processing: process input and compare with correct answer
+ * Output: Text saying correct or incorrect
+ */
+function mathPractice() {
+    var num1 = parseFloat(document.getElementById('num1InputBox').value);
+    var op = document.getElementById('operatorInputBox').value;
+    var num2 = parseFloat(document.getElementById('num2InputBox').value);
+    var num3 = parseFloat(document.getElementById('num3InputBox').value);
+    var text;
+    
+if (op=="+"){
+     if(num1 + num2==num3)
+        text = "Correct! Good job.";
+    else 
+        text ="Incorrect. Try again!";
+}
+if (op=="-"){
+    if(num1 - num2==num3)
+        text = "Correct! Good job.";
+    else 
+        text ="Incorrect. Try again!";
+}
+ if (op=="*"){
+    if(num1 * num2==num3)
+        text = "Correct! Good job.";
+    else 
+        text ="Incorrect. Try again!";
+}    
+if (op=="/"){
+    if(num1 / num2==num3)
+        text = "Correct! Good job.";
+    else 
+        text ="Incorrect. Try again!";
+}
+    
+    document.getElementById('mathDiv').innerHTML = text;
+}
+</script>
+
+</head>
+
+<body>
+    <h1>Math Can Be Fun!!</h1>
+    <p>Practice your arithmetic in the boxes below.</p>
+
+    <input type="text" id="num1InputBox" size ="4">  
+    <input type="text" id="operatorInputBox" size="1">
+    <input type="text" id="num2InputBox" size ="4"> = 
+    <input type="text" id="num3InputBox" size ="4">
+    <button type="button" onclick="mathPractice()">Check</button> 
+<div id="mathDiv"></div>
+
+  
+</body>
+</html>

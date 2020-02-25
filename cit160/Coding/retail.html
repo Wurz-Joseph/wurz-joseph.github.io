@@ -1,0 +1,42 @@
+<!Doctype HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Retail Store</title>
+<script>
+/*Input: A subtotal amount
+ *Processing: if subtotal is > 50 and day is
+ *Tuesday or Wednesday, apply discount. Otherwise
+ *just add tax
+ *Output: Total after tax and discount are applied
+ */
+
+function calcPrice() {
+	var dayOfWeek = new Date().getDay();	
+	var subtotal = parseFloat(document.getElementById('subtotalInputBox').value);
+	var discount = subtotal * .10;
+	var tax = subtotal * .06;
+	var total;
+
+//boolean logic to determine if discount should be applied.
+if (subtotal > 50 && (dayOfWeek ==2 || dayOfWeek ==3)){
+	total = subtotal + tax - discount;
+	}else {
+		total = subtotal + tax;	
+}
+	document.getElementById('outputDiv').innerHTML ="$" + total;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+Subtotal: <input type="text" id="subtotalInputBox" size ="4">
+		  <button type="button" onclick="calcPrice()">Enter</button>
+		  <div id="outputDiv"></div>
+
+</body>
+</html>	

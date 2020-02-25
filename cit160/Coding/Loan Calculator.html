@@ -1,0 +1,65 @@
+<!Doctype HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Loan Calculator</title>
+
+<script>
+function doPayment(){
+var principle = parseFloat(document.getElementById('principle').value);
+var annualRate = parseFloat(document.getElementById('annualRate').value);
+var years = parseFloat(document.getElementById('years').value);
+var periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
+var PMT = computePayment(principle, annualRate, years, periodsPerYear);
+document.getElementById('paymentDiv').innerHTML = "$" + PMT;
+}
+
+function doBalance(){
+var principle = parseFloat(document.getElementById('principle').value);
+var annualRate = parseFloat(document.getElementById('annualRate').value);
+var years = parseFloat(document.getElementById('years').value);
+var periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
+var paidToDate = parseFloat(document.getElementById('paidToDate').value);
+var bal = computeBalance(principle, annualRate, years, periodsPerYear, paidToDate);
+document.getElementById('payoffDiv').innerHTML = "$" + bal;
+}
+
+function computePayment(principle, annualRate, years, periodsPerYear){	
+var ratePerPeriod = annualRate / periodsPerYear;
+var totalPeriods = periodsPerYear * years;
+var r = Math.pow((1 + ratePerPeriod), - totalPeriods);
+var PMT = (principle * ratePerPeriod) / (1 - r);
+return PMT;	
+}
+
+function computeBalance(principle, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate){
+//formula/ b=a(1+r)^n - p((1 + r)-1)/r
+
+var ratePerPeriod = annualRate / periodsPerYear;
+
+//(1 + r)^n portion of formula
+var b = Math.pow((1 + ratePerPeriod), numberOfPaymentsPaidToDate);
+var PMT =  computePayment(principle, annualRate, years, periodsPerYear);
+// broke formula into first and second half then subtracted
+var first = b * principle;
+var second = ((b - 1) * PMT) / ratePerPeriod; 
+var result = first - second;
+return result;
+}
+</script>
+
+</head> 
+
+<body>
+<h1>Loan Calculator</h1>
+Amount borrowed (principle) <input type="text" id="principle" size="4"><br>
+Annual interest rate (example: .065) <input type="text" id="annualRate" size="4"><br>
+Number of years	<input type="text" id="years" size="4"><br>
+Payments per year <input type="text" id="periodsPerYear" size="4"><br>
+<button type="button" onclick="doPayment()">Compute payment</button><br>
+<div id="paymentDiv"></div>
+Number of payments paid to date<input type="text" id="paidToDate" size="4"><br>
+<button type="button" onclick="doBalance()">Compute payoff amount</button>
+<div id="payoffDiv"></div>
+</body>
+</html>

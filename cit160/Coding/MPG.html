@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Calculate MPG</title>
+
+<script>
+/* Input: starting miles, ending miles, and gallons used
+ * Processing: ending minus starting / gallons
+ * Output: mpg
+ */
+function milesPerGallon() {
+    
+    var start = parseFloat(document.getElementById('startInputBox').value);
+
+    var end = parseFloat(document.getElementById('endInputBox').value);
+
+    var gal = parseFloat(document.getElementById('gasInputBox').value);
+
+    // calculate how many mpg.
+    var mpg = (end - start) / gal;
+
+    // Diplay the miles per gallon
+    document.getElementById('mpgDiv').innerHTML = mpg + " MPG";
+}
+</script>
+</head>
+
+<body>                               
+Enter starting odometer reading: 
+<br><input type="text" size="2" id="startInputBox"><br>
+
+Enter ending odometer reading:
+<br><input type="text" size="2" id="endInputBox"><br>
+
+Gallons of gasoline used: 
+<br><input type="text" size="2" id="gasInputBox"><br>
+<br><button type="button" onclick="milesPerGallon()">Calculate</button>
+<hr><div id="mpgDiv"></div>                     
+</body>            
+</html>

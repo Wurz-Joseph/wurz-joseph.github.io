@@ -1,0 +1,41 @@
+<!Doctype HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sum of Odd Integers</title>
+<script>
+
+/* Input: Any integer
+* Processing: Add the sum of all odd numbers up to and including
+* user integer.
+* Output: The sum of the odd integers.
+*/
+function list(){
+	var list =[9, 7, 2, 4, 1];
+	var reverseList= reverseList (list);
+
+document.getElementById("outputDiv").innerHTML = reverseList;
+
+}
+function reverseList (list)
+{
+	 retval = [];
+	 for (index = list.length - 1; index >= 0; --index)
+	 {
+	retval.push (list [index]);
+	 }
+	 return retval;
+	
+
+
+
+}
+
+</script>
+</head>
+<body>
+
+<button type="button" onclick="">Output</button>
+<div id ="outputDiv"></div>
+</body>
+</html

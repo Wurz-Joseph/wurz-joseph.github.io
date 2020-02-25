@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<meta charset="utf-8">
+<head>
+ <title>Count Evens With Arrays</title>
+    <script type="text/javascript">
+        /*input: none
+         *Processing: Deteremines if numbere in array are even and adds total amount of evens
+         *Output: The number of even numbers in the array
+         */
+        function doCalcs()
+        {
+            var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12];
+            var evenscount = countEvens(array);    //This should be 5
+           
+            document.getElementById("output").innerHTML = "evenscount = " + evenscount;
+        }
+        function countEvens(list)
+        {
+        	var sum = 0;
+        	for (var i = 0; i<list.length; i++){
+        		if (list[i]%2==0){
+        			sum +=1;
+        	    }
+        		}
+        			return sum;
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" onclick="doCalcs()">Execute Functions</button>
+    <div id="output"></div>
+</body>
+</html>

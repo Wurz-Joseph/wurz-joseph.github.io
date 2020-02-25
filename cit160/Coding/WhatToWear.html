@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Proper Footware</title>
+<script>
+/* Input: A weather condition
+ * Processing: compare user entry with if condtions
+ * Output: The proper footware
+ */
+function weatherFootware() {
+    var weather = document.getElementById('weatherInputBox').value;
+
+    var footware;
+// determines what footware to wear for what weather
+if (weather == 'hot') {
+        footware = "sandals";
+    } else if (weather == 'rain') {
+        footware = "galoshes";
+    } else if (weather == 'snow') {
+        footware = "boots"; 
+    } else {
+        footware = "shoes"; 
+    }
+    
+    document.getElementById('weatherDiv').innerHTML = "You should wear " + footware + "!";
+}
+</script>
+</head>
+
+<body>
+<h1>What type of footware should I wear?</h1>
+What's the weather forecast? <input type="text" id="weatherInputBox" size="4"><br>  
+
+<button type="button" onclick="weatherFootware()">Submit</button>
+<p id = "weatherDiv"></p>    
+</body>
+</html>

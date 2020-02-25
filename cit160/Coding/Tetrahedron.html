@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Tetrahedron</title>
+<script>
+	/* input: side length
+	 * Processing: computes side^3/(6 * sqrt(2))
+	 * Outputs: Volume of tetrahedron
+	 */ 
+
+function computeVolume(){
+	var side = parseFloat(document.getElementById('length').value);
+
+	var volume = side * side * side / (6 * Math.sqrt(2));
+
+	document.getElementById('volumeDiv').innerHTML = volume + ' units^3';
+}
+
+</script>
+</head>
+
+<body>
+    <h1>Volume of a Tetrahedron</h1>
+    Side Length<input type="text" id="length"><br>
+    <button type="button" onclick="computeVolume()">Volume</button><br>
+    <p>Volume =</p><div id="volumeDiv"></div>
+    
+</body>
+</html>
