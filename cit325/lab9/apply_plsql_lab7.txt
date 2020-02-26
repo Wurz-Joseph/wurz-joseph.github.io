@@ -1,0 +1,298 @@
+
+ System System                                                                  
+User ID User Name                                                               
+------- ------------                                                            
+      2 DBA                                                                     
+      3 DBA                                                                     
+      4 DBA                                                                     
+      5 DBA                                                                     
+
+4 rows selected.
+
+
+4 rows updated.
+
+
+PL/SQL procedure successfully completed.
+
+
+ System System                                                                  
+User ID User Name                                                               
+------- ------------                                                            
+      2 DBA 1                                                                   
+      3 DBA 2                                                                   
+      4 DBA 3                                                                   
+      5 DBA 4                                                                   
+
+4 rows selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+Procedure created.
+
+
+PL/SQL procedure successfully completed.
+
+
+                         ACCOUNT                                                
+Full Name                NUMBER     Address                Telephone            
+------------------------ ---------- ---------------------- --------------       
+Charles Francis Xavier   SLC-000008 Milbridge, Maine       (207) 111-1234       
+
+1 row selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+                         ACCOUNT                                                
+Full Name                NUMBER     Address                Telephone            
+------------------------ ---------- ---------------------- --------------       
+Maura Jane Haggerty      SLC-000009 Bangor, Maine          (207) 111-1234       
+
+1 row selected.
+
+
+Procedure dropped.
+
+
+Function created.
+
+  1  CREATE OR REPLACE FUNCTION insert_contact
+  2  ( PV_FIRST_NAME          VARCHAR2
+  3  , PV_MIDDLE_NAME         VARCHAR2
+  4  , PV_LAST_NAME           VARCHAR2
+  5  , PV_CONTACT_TYPE        VARCHAR2
+  6  , PV_ACCOUNT_NUMBER      VARCHAR2
+  7  , PV_MEMBER_TYPE         VARCHAR2
+  8  , PV_CREDIT_CARD_NUMBER  VARCHAR2
+  9  , PV_CREDIT_CARD_TYPE    VARCHAR2
+ 10  , PV_CITY                VARCHAR2
+ 11  , PV_STATE_PROVINCE      VARCHAR2
+ 12  , PV_POSTAL_CODE         VARCHAR2
+ 13  , PV_ADDRESS_TYPE        VARCHAR2
+ 14  , PV_COUNTRY_CODE        VARCHAR2
+ 15  , PV_AREA_CODE           VARCHAR2
+ 16  , PV_TELEPHONE_NUMBER    VARCHAR2
+ 17  , PV_TELEPHONE_TYPE      VARCHAR2
+ 18  , PV_USER_NAME           VARCHAR2) RETURN NUMBER IS
+ 19  
+ 20  
+ 21    /*Date Constant*/
+ 22    lv_creation_date      DATE := SYSDATE;
+ 23  
+ 24    /*Declare a who-audit ID variable*/
+ 25    lv_created_by         NUMBER;
+ 26  
+ 27    /* Declare type variables*/
+ 28    lv_member_type         NUMBER;
+ 29    lv_credit_card_type    NUMBER;
+ 30    lv_contact_type        NUMBER;
+ 31    lv_address_type        NUMBER;
+ 32    lv_telephone_type      NUMBER;
+ 33  
+ 34    /*Declare a return type. */
+ 35    lv_return_value        NUMBER:= 0;
+ 36  
+ 37    /*Declare a local cursor. */
+ 38    Cursor get_lookup_type
+ 39    ( cv_table_name       VARCHAR2
+ 40    , cv_column_name      VARCHAR2
+ 41    , cv_type_name        VARCHAR2 ) IS
+ 42    SELECT common_lookup_id
+ 43    FROM   common_lookup
+ 44    WHERE  common_lookup_table = cv_table_name
+ 45    AND    common_lookup_column = cv_column_name
+ 46    AND    common_lookup_type = cv_type_name;
+ 47  
+ 48    /*Declare a precompiler instruction.*/
+ 49    PRAGMA AUTONOMOUS_TRANSACTION;
+ 50  
+ 51  BEGIN
+ 52   /*Get the member_type ID value.*/
+ 53     FOR i IN get_lookup_type('MEMBER','MEMBER_TYPE',pv_member_type) LOOP
+ 54        lv_member_type := i.common_lookup_id;
+ 55     END LOOP;
+ 56  
+ 57  
+ 58     /*Get the credit_card_type ID value.*/
+ 59     FOR i IN get_lookup_type('MEMBER','CREDIT_CARD_TYPE',pv_credit_card_type) LOOP
+ 60        lv_credit_card_type := i.common_lookup_id;
+ 61     END LOOP;
+ 62  
+ 63  
+ 64     /*Get the contact_type ID value.*/
+ 65     FOR i IN get_lookup_type('CONTACT','CONTACT_TYPE',pv_contact_type) LOOP
+ 66        lv_contact_type := i.common_lookup_id;
+ 67     END LOOP;
+ 68  
+ 69  
+ 70        /*Get the address_type ID value.*/
+ 71     FOR i IN get_lookup_type('ADDRESS','ADDRESS_TYPE',pv_address_type) LOOP
+ 72        lv_address_type := i.common_lookup_id;
+ 73     END LOOP;
+ 74  
+ 75  
+ 76        /*Get the telephone_type ID value.*/
+ 77     FOR i IN get_lookup_type('TELEPHONE','TELEPHONE_TYPE',pv_telephone_type) LOOP
+ 78        lv_telephone_type := i.common_lookup_id;
+ 79     END LOOP;
+ 80  
+ 81     /*Get the system user id value */
+ 82     SELECT system_user_id
+ 83     INTO lv_created_by
+ 84     FROM system_user
+ 85     WHERE system_user_name = pv_user_name;
+ 86  
+ 87     /*Set save point*/
+ 88     SAVEPOINT start_point;
+ 89  
+ 90     /*Insert into member table.*/
+ 91     INSERT INTO member
+ 92     ( member_id
+ 93     , member_type
+ 94     , account_number
+ 95     , credit_card_number
+ 96     , credit_card_type
+ 97     , created_by
+ 98     , creation_date
+ 99     , last_updated_by
+100     , last_update_date )
+101     VALUES
+102     ( member_s1.NEXTVAL
+103     , lv_member_type
+104     , pv_account_number
+105     , pv_credit_card_number
+106     , lv_credit_card_type
+107     , lv_created_by
+108     , lv_creation_date
+109     , lv_created_by
+110     , lv_creation_date );
+111  
+112     /*Insert into contact table.*/
+113     INSERT INTO contact
+114     ( contact_id
+115     , member_id
+116     , contact_type
+117     , first_name
+118     , middle_name
+119     , last_name
+120     , created_by
+121     , creation_date
+122     , last_updated_by
+123     , last_update_date)
+124     VALUES
+125     ( contact_s1.NEXTVAL
+126     , member_s1.CURRVAL
+127     , lv_contact_type
+128     , pv_first_name
+129     , pv_middle_name
+130     , pv_last_name
+131     , lv_created_by
+132     , lv_creation_date
+133     , lv_created_by
+134     , lv_creation_date );
+135  
+136  
+137     /*Insert into address table.*/
+138     INSERT INTO address
+139     ( address_id
+140     , contact_id
+141     , address_type
+142     , city
+143     , state_province
+144     , postal_code
+145     , created_by
+146     , creation_date
+147     , last_updated_by
+148     , last_update_date)
+149     VALUES
+150     ( address_s1.NEXTVAL
+151     , contact_s1.CURRVAL
+152     , lv_address_type
+153     , pv_city
+154     , pv_state_province
+155     , pv_postal_code
+156     , lv_created_by
+157     , lv_creation_date
+158     , lv_created_by
+159     , lv_creation_date );
+160  
+161     /*Insert into telephone table.*/
+162     INSERT INTO telephone
+163     ( telephone_id
+164     , contact_id
+165     , address_id
+166     , telephone_type
+167     , country_code
+168     , area_code
+169     , telephone_number
+170     , created_by
+171     , creation_date
+172     , last_updated_by
+173     , last_update_date)
+174     VALUES
+175     ( telephone_s1.NEXTVAL
+176     , contact_s1.CURRVAL
+177     , address_s1.CURRVAL
+178     , lv_telephone_type
+179     , pv_country_code
+180     , pv_area_code
+181     , pv_telephone_number
+182     , lv_created_by
+183     , lv_creation_date
+184     , lv_created_by
+185     , lv_creation_date );
+186  
+187    COMMIT;
+188  
+189    RETURN lv_return_value;
+190  EXCEPTION
+191    WHEN OTHERS THEN
+192      ROLLBACK TO start_point;
+193      lv_return_value := 1;
+194      RETURN lv_return_value;
+195* END insert_contact;
+No errors.
+Success!                                                                        
+
+PL/SQL procedure successfully completed.
+
+
+Type created.
+
+
+Type created.
+
+
+Function created.
+
+
+Full Name                                                                       
+------------------------                                                        
+Randi Winn                                                                      
+Brian Winn                                                                      
+Oscar Vizquel                                                                   
+Doreen Vizquel                                                                  
+Meaghan Sweeney                                                                 
+Matthew Sweeney                                                                 
+Ian M Sweeney                                                                   
+Clinton Goeffrey Ward                                                           
+Brandt Henry Ward                                                               
+Moss Wendy Jane                                                                 
+Gretelz Simon Jonah                                                             
+Royal Elizabeth Jane                                                            
+Smith Brian Nathan                                                              
+Harry Potter                                                                    
+Ginny Potter                                                                    
+James Sirius Potter                                                             
+Albus Severus Potter                                                            
+Lily Luna Potter                                                                
+Charles Francis Xavier                                                          
+Maura Jane Haggerty                                                             
+Hariet Mary McDonnell                                                           
+
+21 rows selected.
+

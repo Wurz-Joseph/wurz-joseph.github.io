@@ -1,0 +1,16 @@
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+ADDRESS                                                                         
+COMMON_LOOKUP                                                                   
+CONTACT                                                                         
+ITEM                                                                            
+MEMBER                                                                          
+RENTAL                                                                          
+RENTAL_ITEM                                                                     
+STREET_ADDRESS                                                                  
+SYSTEM_USER                                                                     
+TELEPHONE                                                                       
+
+10 rows selected.
+

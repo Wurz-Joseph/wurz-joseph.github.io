@@ -1,0 +1,38 @@
+SQL> COL table_name   FORMAT A20     HEADING "Table Name"
+SQL> COL column_cnt   FORMAT 9,999  HEADING "Column #"
+SQL> COL row_cnt      FORMAT 9,999  HEADING "Row #"
+SQL> SELECT table_name
+  2  ,      column_cnt
+  3  ,      row_cnt
+  4  FROM   TABLE(listing);
+
+Table Name           Column #  Row #                                            
+-------------------- -------- ------                                            
+DEMO_TAGS                   8      6                                            
+DEMO_TAGS_TYPE_SUM          3      3                                            
+DEMO_TAGS_SUM               2      3                                            
+DEMO_CONSTRAINT_LOOK        2      4                                            
+UP                                                                              
+                                                                                
+SYSTEM_USER                11      5                                            
+COMMON_LOOKUP              10     49                                            
+MEMBER                      9     10                                            
+CONTACT                    10     18                                            
+ADDRESS                    10     18                                            
+
+Table Name           Column #  Row #                                            
+-------------------- -------- ------                                            
+STREET_ADDRESS              8     28                                            
+TELEPHONE                  11     18                                            
+RENTAL                      8  4,694                                            
+ITEM                       14     93                                            
+RENTAL_ITEM                 9  4,703                                            
+PRICE                      11    558                                            
+TRANSACTION                12  4,694                                            
+CALENDAR                    9    300                                            
+AIRPORT                     9      6                                            
+ACCOUNT_LIST                8    200                                            
+
+19 rows selected.
+
+SQL> SPOOL OFF;

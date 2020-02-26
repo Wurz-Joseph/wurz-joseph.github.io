@@ -1,0 +1,243 @@
+
+Commit complete.
+
+
+Table altered.
+
+ADD text_file_name   VARCHAR2(40)
+    *
+ERROR at line 2:
+ORA-01430: column being added already exists in table 
+
+
+
+Table created.
+
+CREATE TABLE logger
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+CREATE SEQUENCE logger_s
+                *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+
+PL/SQL procedure successfully completed.
+
+
+         Old                        New                                         
+Logger  Item                       Item                                         
+  ID #  ID # Old Item Title        ID # New Item Title                          
+------ ----- -------------------- ----- ------------------------------          
+    41  1014 Brave Heart           1014 Brave Heart                             
+
+1 row selected.
+
+
+         Old                        New                                         
+Logger  Item                       Item                                         
+  ID #  ID # Old Item Title        ID # New Item Title                          
+------ ----- -------------------- ----- ------------------------------          
+    41  1014 Brave Heart           1014 Brave Heart                             
+
+1 row selected.
+
+
+Package created.
+
+
+Package created.
+
+
+Package body created.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+         Old                        New                                         
+Logger  Item                       Item                                         
+  ID #  ID # Old Item Title        ID # New Item Title                          
+------ ----- -------------------- ----- ------------------------------          
+    41  1014 Brave Heart           1014 Brave Heart                             
+    42 <Null <Null>                1035 King Arthur-Inserted                    
+       >                                                                        
+                                                                                
+    43  1035 King Arthur           1035 King Arthur-Changed                     
+    44  1035 King Arthur-Deleted  <Null <Null>                                  
+                                  >                                             
+                                                                                
+
+4 rows selected.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+no rows selected
+
+
+0 rows deleted.
+
+
+no rows selected
+
+
+Table altered.
+
+
+Table altered.
+
+
+1 row created.
+
+
+Common Lookup  Common Lookup  Common Lookup                                     
+Table          Column         Type                                              
+-------------- -------------- --------------                                    
+ITEM           ITEM_TYPE      BLU-RAY                                           
+
+1 row selected.
+
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+ Item                                           Item   Item                     
+ ID # Item Title           Item Subtitle        Rating Type                     
+----- -------------------- -------------------- ------ ------------------       
+ 1095 BOURNE LEGACY        <Null>               PG-13  Blu-ray                  
+ 1096 Star Wars            The Force Awakens    PG-13  Blu-ray                  
+ 1094 BOURNE               <Null>               PG-13  Blu-ray                  
+
+3 rows selected.
+
+
+         Old                        New                                         
+Logger  Item                       Item                                         
+  ID #  ID # Old Item Title        ID # New Item Title                          
+------ ----- -------------------- ----- ------------------------------          
+    41  1014 Brave Heart           1014 Brave Heart                             
+    42 <Null <Null>                1035 King Arthur-Inserted                    
+       >                                                                        
+                                                                                
+    43  1035 King Arthur           1035 King Arthur-Changed                     
+    44  1035 King Arthur-Deleted  <Null <Null>                                  
+                                  >                                             
+                                                                                
+    45 <Null <Null>                1095 BOURNE LEGACY:                          
+       >                                                                        
+                                                                                
+    46 <Null <Null>                1096 Star Wars: The Force Awakens            
+       >                                                                        
+                                                                                
+
+6 rows selected.
+
+UPDATE item
+       *
+ERROR at line 1:
+ORA-20001: No colons allowed in item titles.
+ORA-06512: at "STUDENT.ITEM_TRIG", line 68
+ORA-04088: error during execution of trigger 'STUDENT.ITEM_TRIG' 
+
+
+
+ Item                                           Item   Item                     
+ ID # Item Title           Item Subtitle        Rating Type                     
+----- -------------------- -------------------- ------ ------------------       
+ 1095 BOURNE LEGACY        <Null>               PG-13  Blu-ray                  
+ 1096 Star Wars            The Force Awakens    PG-13  Blu-ray                  
+ 1094 BOURNE               <Null>               PG-13  Blu-ray                  
+
+3 rows selected.
+
+
+         Old                        New                                         
+Logger  Item                       Item                                         
+  ID #  ID # Old Item Title        ID # New Item Title                          
+------ ----- -------------------- ----- ------------------------------          
+    41  1014 Brave Heart           1014 Brave Heart                             
+    42 <Null <Null>                1035 King Arthur-Inserted                    
+       >                                                                        
+                                                                                
+    43  1035 King Arthur           1035 King Arthur-Changed                     
+    44  1035 King Arthur-Deleted  <Null <Null>                                  
+                                  >                                             
+                                                                                
+    45 <Null <Null>                1095 BOURNE LEGACY:                          
+       >                                                                        
+                                                                                
+    46 <Null <Null>                1096 Star Wars: The Force Awakens            
+       >                                                                        
+                                                                                
+    47  1096 Star Wars             1096 Star Wars: The Force Awakens            
+
+7 rows selected.
+
+
+1 row deleted.
+
+
+ Item                                           Item   Item                     
+ ID # Item Title           Item Subtitle        Rating Type                     
+----- -------------------- -------------------- ------ ------------------       
+ 1095 BOURNE LEGACY        <Null>               PG-13  Blu-ray                  
+ 1094 BOURNE               <Null>               PG-13  Blu-ray                  
+
+2 rows selected.
+
+
+         Old                        New                                         
+Logger  Item                       Item                                         
+  ID #  ID # Old Item Title        ID # New Item Title                          
+------ ----- -------------------- ----- ------------------------------          
+    41  1014 Brave Heart           1014 Brave Heart                             
+    42 <Null <Null>                1035 King Arthur-Inserted                    
+       >                                                                        
+                                                                                
+    43  1035 King Arthur           1035 King Arthur-Changed                     
+    44  1035 King Arthur-Deleted  <Null <Null>                                  
+                                  >                                             
+                                                                                
+    45 <Null <Null>                1095 BOURNE LEGACY:                          
+       >                                                                        
+                                                                                
+    46 <Null <Null>                1096 Star Wars: The Force Awakens            
+       >                                                                        
+                                                                                
+    47  1096 Star Wars             1096 Star Wars: The Force Awakens            
+    48  1096 Star Wars            <Null <Null>                                  
+                                  >                                             
+                                                                                
+
+8 rows selected.
+

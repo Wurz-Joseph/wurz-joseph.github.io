@@ -1,0 +1,105 @@
+
+Type BASE_T dropped.
+
+
+Type BASE_T compiled
+
+Name  Null? Type         
+----- ----- ------------ 
+ONAME       VARCHAR2(30) 
+NAME        VARCHAR2(30) 
+
+METHOD
+------
+FINAL CONSTRUCTOR FUNCTION BASE_T RETURNS SELF AS RESULT
+METHOD
+------
+FINAL CONSTRUCTOR FUNCTION BASE_T RETURNS SELF AS RESULT
+Argument Name                  Type                    In/Out Default?
+------------------------------ ----------------------- ------ --------
+ONAME                          VARCHAR2                IN             
+NAME                           VARCHAR2                IN             
+
+METHOD
+------
+MEMBER FUNCTION GET_NAME RETURNS VARCHAR2
+METHOD
+------
+MEMBER FUNCTION GET_ONAME RETURNS VARCHAR2
+METHOD
+------
+MEMBER PROCEDURE SET_ONAME
+Argument Name                  Type                    In/Out Default?
+------------------------------ ----------------------- ------ --------
+ONAME                          VARCHAR2                IN             
+
+METHOD
+------
+MEMBER FUNCTION TO_STRING RETURNS VARCHAR2
+
+Table LOGGER dropped.
+
+
+Table LOGGER created.
+
+
+Sequence LOGGER_S dropped.
+
+
+Sequence LOGGER_S created.
+
+Name      Null? Type   
+--------- ----- ------ 
+LOGGER_ID       NUMBER 
+LOG_TEXT        BASE_T 
+
+Type Body BASE_T compiled
+
+Default  : [BASE_T]
+Override : [SUBSTITUTE]
+
+
+PL/SQL procedure successfully completed.
+
+
+1 row inserted.
+
+
+PL/SQL procedure successfully completed.
+
+
+ LOGGER_ID ONAME                GET_NAME             TO_STRING           
+---------- -------------------- -------------------- --------------------
+         1 BASE_T               Unset                [BASE_T]            
+         2 BASE_T               NEW                  [BASE_T]            
+
+
+Type ITEM_T dropped.
+
+
+Type ITEM_T compiled
+
+
+Type Body ITEM_T compiled
+
+
+Type CONTACT_T dropped.
+
+
+Type CONTACT_T compiled
+
+
+Type Body CONTACT_T compiled
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+ LOGGER_ID ONAME                GET_NAME             TO_STRING           
+---------- -------------------- -------------------- --------------------
+         3 ITEM_T               NEW                  [ITEM_T]            
+         4 CONTACT_T            NEW                  [CONTACT_T]         
+

@@ -1,0 +1,38 @@
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+                         ACCOUNT                                                
+Full Name                NUMBER     Address                Telephone            
+------------------------ ---------- ---------------------- --------------       
+Charlie Brown            SLC-000011 Lehi, Utah             (207) 877-4321       
+Pepermint Patty          SLC-000011 Lehi, Utah             (207) 877-4321       
+Sally Brown              SLC-000011 Lehi, Utah             (207) 877-4321       
+
+3 rows selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+                    System Account                                              
+Full Name          User ID Number       Address          Telephone              
+------------------ ------- ------------ ---------------- ----------------       
+Shirley Partridge        4 SLC-000012   Lehi, Utah       (207) 877-4321         
+Keith Partridge          6 SLC-000012   Lehi, Utah       (207) 877-4321         
+Laurie Partridge        -1 SLC-000012   Lehi, Utah       (207) 877-4321         
+
+3 rows selected.
+

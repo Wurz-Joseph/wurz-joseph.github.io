@@ -1,0 +1,240 @@
+SQL> 
+SQL> -- --------------------------------------------------------
+SQL> --  Step #1
+SQL> --  -------
+SQL> --  Using the query from Lab 7, Step 4, insert the 135
+SQL> --  rows in the PRICE table created in Lab 6.
+SQL> -- --------------------------------------------------------
+SQL> 
+SQL> -- Insert step #1 statements here.
+SQL> 
+SQL> 
+SQL> SELECT   DISTINCT c.contact_id
+  2  FROM     member m INNER JOIN transaction_upload tu
+  3  ON       m.account_number = tu.account_number INNER JOIN contact c
+  4  ON       m.member_id = c.member_id
+  5  WHERE    c.first_name = tu.first_name
+  6  AND      NVL(c.middle_name,'x') = NVL(tu.middle_name,'x')
+  7  AND      c.last_name = tu.last_name
+  8  ORDER BY c.contact_id;
+
+                      Contact
+                     --------
+                      Contact
+                         ID #
+-----------------------------
+                         1001
+                         1002
+                         1003
+                         1004
+                         1005
+                         1006
+                         1007
+
+7 rows selected. 
+
+SQL> 
+SQL> 
+SQL> 
+SQL> INSERT INTO rental
+  2  SELECT   NVL(r.rental_id,rental_s1.NEXTVAL) AS rental_id
+  3  ,        r.contact_id
+  4  ,        r.check_out_date
+  5  ,        r.return_date
+  6  ,        r.created_by
+  7  ,        r.creation_date
+  8  ,        r.last_updated_by
+  9  ,        r.last_update_date
+ 10  FROM    (SELECT   DISTINCT
+ 11                    r.rental_id
+ 12           ,        c.contact_id
+ 13           ,        tu.check_out_date AS check_out_date
+ 14           ,        tu.return_date AS return_date
+ 15           ,        1 AS created_by
+ 16           ,        TRUNC(SYSDATE) AS creation_date
+ 17           ,        1 AS last_updated_by
+ 18           ,        TRUNC(SYSDATE) AS last_update_date
+ 19           FROM     member m INNER JOIN contact c
+ 20           ON       m.member_id = c.member_id INNER JOIN transaction_upload tu
+ 21           ON       c.first_name = tu.first_name
+ 22           AND      NVL(c.middle_name,'x') = NVL(tu.middle_name,'x')
+ 23           AND      c.last_name = tu.last_name
+ 24           AND      tu.account_number = m.account_number
+ 25           LEFT JOIN rental r
+ 26           ON    c.contact_id = r.customer_id
+ 27           AND  TRUNC(tu.check_out_date) = TRUNC(r.check_out_date)
+ 28           AND  TRUNC(tu.return_date) = TRUNC(r.return_date)) r;
+
+2,175 rows inserted.
+
+SQL> 
+SQL> COL rental_count FORMAT 999,999 HEADING "Rental|after|Count"
+SQL> SELECT   COUNT(*) AS rental_count
+  2  FROM     rental;
+
+            Rental
+             after
+             Count
+------------------
+   2,183          
+
+1 row selected. 
+
+SQL> 
+SQL> -- --------------------------------------------------------
+SQL> --  Step #2
+SQL> --  -------
+SQL> --  Add a NOT NULL constraint on the PRICE_TYPE column
+SQL> --  of the PRICE table.
+SQL> -- --------------------------------------------------------
+SQL> 
+SQL> -- Insert step #2 statements here.
+SQL> 
+SQL> 
+SQL> COL rental_item_count FORMAT 999,999 HEADING "Rental|Item|Before|Count"
+SQL> SELECT   COUNT(*) AS rental_item_count
+  2  FROM     rental_item;
+
+                  Rental
+                    Item
+                  Before
+                   Count
+------------------------
+                      13
+
+1 row selected. 
+
+SQL> 
+SQL>          INSERT INTO rental_item
+  2  (SELECT   NVL(ri.rental_item_id,rental_item_s1.NEXTVAL)
+  3   ,        r.rental_id
+  4   ,        tu.item_id AS item_id
+  5   ,        1 AS created_by
+  6   ,        TRUNC(SYSDATE) AS creation_date
+  7   ,        1 AS last_updated_by
+  8   ,        TRUNC(SYSDATE) AS last_update_date
+  9   ,        cl1.common_lookup_id AS rental_item_type
+ 10   ,        r.return_date - r.check_out_date AS rental_item_price
+ 11  FROM     member m INNER JOIN contact c
+ 12           ON       m.member_id = c.member_id INNER JOIN transaction_upload tu
+ 13           ON       c.first_name = tu.first_name
+ 14           AND      NVL(c.middle_name,'x') = NVL(tu.middle_name,'x')
+ 15           AND      c.last_name = tu.last_name
+ 16           AND      tu.account_number = m.account_number
+ 17           LEFT JOIN rental r
+ 18           ON    c.contact_id = r.customer_id
+ 19           AND  TRUNC(tu.check_out_date) = TRUNC(r.check_out_date)
+ 20           AND  TRUNC(tu.return_date) = TRUNC(r.return_date)
+ 21           INNER JOIN common_lookup cl1
+ 22           ON     cl1.common_lookup_table = 'RENTAL_ITEM'
+ 23           AND    cl1.common_lookup_column = 'RENTAL_ITEM_TYPE'
+ 24           AND    cl1.common_lookup_type = tu.rental_item_type
+ 25           LEFT JOIN rental_item ri
+ 26           ON r.rental_id = ri.rental_id);
+
+5,376 rows inserted.
+
+SQL> 
+SQL> COL rental_item_count FORMAT 999,999 HEADING "Rental|Item|after|Count"
+SQL> SELECT   COUNT(*) AS rental_item_count
+  2  FROM     rental_item;
+
+                 Rental
+                   Item
+                  after
+                  Count
+-----------------------
+   5,389               
+
+1 row selected. 
+
+SQL> 
+SQL> -- --------------------------------------------------------
+SQL> --  Step #3
+SQL> --  -------
+SQL> --  Update the RENTAL_ITEM_PRICE column with valid price
+SQL> --  values in the RENTAL_ITEM table.
+SQL> -- --------------------------------------------------------
+SQL> 
+SQL> 
+SQL> 
+SQL> INSERT INTO transaction
+  2  SELECT   NVL(t.transaction_id,transaction_s1.NEXTVAL) transaction_id
+  3  ,        t.transaction_account
+  4  ,        t.transaction_type
+  5  ,        t.transaction_date
+  6  ,        t.transaction_amount
+  7  ,        t.rental_id
+  8  ,        t.payment_method_type
+  9  ,        t.payment_account_number
+ 10  ,        t.created_by
+ 11  ,        t.creation_date
+ 12  ,        t.last_updated_by
+ 13  ,        t.last_update_date
+ 14  FROM    (SELECT   t.transaction_id
+ 15           ,        tu.payment_account_number AS transaction_account
+ 16           ,        cl1.common_lookup_id AS transaction_type
+ 17           ,        tu.transaction_date
+ 18           ,       (SUM(tu.transaction_amount) / 1.06) AS transaction_amount
+ 19           ,        r.rental_id
+ 20           ,        cl2.common_lookup_id AS payment_method_type
+ 21           ,        m.credit_card_number AS payment_account_number
+ 22           ,        1 AS created_by
+ 23           ,        TRUNC(SYSDATE) AS creation_date
+ 24           ,        1 AS last_updated_by
+ 25           ,        TRUNC(SYSDATE) AS last_update_date
+ 26           FROM     member m INNER JOIN contact c
+ 27           ON       m.member_id = c.member_id INNER JOIN transaction_upload tu
+ 28           ON       c.first_name = tu.first_name
+ 29           AND      NVL(c.middle_name,'x') = NVL(tu.middle_name,'x')
+ 30           AND      c.last_name = tu.last_name
+ 31           AND      tu.account_number = m.account_number
+ 32           LEFT JOIN rental r
+ 33           ON    c.contact_id = r.customer_id
+ 34           AND  TRUNC(tu.check_out_date) = TRUNC(r.check_out_date)
+ 35           AND  TRUNC(tu.return_date) = TRUNC(r.return_date)
+ 36           INNER JOIN common_lookup cl1
+ 37           ON     cl1.common_lookup_table = 'TRANSACTION'
+ 38           AND    cl1.common_lookup_column = 'TRANSACTION_TYPE'
+ 39           AND    cl1.common_lookup_type = tu.transaction_type
+ 40             INNER JOIN common_lookup cl2
+ 41           ON     cl2.common_lookup_table = 'TRANSACTION'
+ 42           AND    cl2.common_lookup_column = 'PAYMENT_METHOD_TYPE'
+ 43           AND    cl2.common_lookup_type = tu.payment_method_type
+ 44           LEFT JOIN transaction t
+ 45           ON t.transaction_account = tu.payment_account_number
+ 46           AND t.rental_id = r.rental_id
+ 47           AND t.transaction_type = cl1.common_lookup_id
+ 48           AND t.transaction_date = tu.transaction_date
+ 49           AND t.payment_method_type = cl2.common_lookup_id
+ 50           AND t.payment_account_number = m.credit_card_number
+ 51           GROUP BY t.transaction_id
+ 52           ,        tu.payment_account_number
+ 53           ,        cl1.common_lookup_id
+ 54           ,        tu.transaction_date
+ 55           ,        r.rental_id
+ 56           ,        cl2.common_lookup_id
+ 57           ,        m.credit_card_number
+ 58           ,        1
+ 59           ,        TRUNC(SYSDATE)
+ 60           ,        1
+ 61           ,        TRUNC(SYSDATE)) t;
+
+2,175 rows inserted.
+
+SQL> 
+SQL>  COL transaction_count FORMAT 999,999 HEADING "Transaction|After|Count"
+SQL> SELECT   COUNT(*) AS transaction_count
+  2  FROM     TRANSACTION;
+
+            Transaction
+                  After
+                  Count
+-----------------------
+   2,175               
+
+1 row selected. 
+
+SQL> 
+SQL> -- Close log file.
+SQL> SPOOL OFF
