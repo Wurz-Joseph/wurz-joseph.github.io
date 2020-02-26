@@ -47,7 +47,7 @@ li a{
     text-decoration: none;
 }
 footer {
-    position: fixed;
+    position: relative;
     z-index: -1;
     bottom: 0;
     left: 0;
