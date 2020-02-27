@@ -5,9 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel=stylesheet href="styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/site.css">
 
 
@@ -15,7 +13,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-dark bg-primary navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="./index.html">Portfolio</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
@@ -25,38 +23,41 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="./index.html">Home</a>
+                            <a class="nav-link active" href="./index.html">Home</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <div class="text-center">
-                <h1 class="display-4">Joseph Wurz</h1>
-                <section class="jumbotron">
-                    <h4>Computer Information Technology Hub.</h4>
-                    <img src="" />
-                </section>
+    <div class="text-center">
+        <div class="jumbotron jumbotron-fluid text-white parallax-container d-flex align-items-center justify-content-center">
+            <div class="centered">
+            <h1 class="display-4">Joseph Wurz's</h1>
+            <h4>Computer Information Technology Hub</h4>
+        </div>
+        </div>
+        <div class="container">
+            <main role="main" class="pb-3">
                 <div class="container">
                     <div class="row offset-md-2 offset-lg-1">
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 160:<br />Introduction to Programming</h5>
                             <p>JavaScript Programming</p>
-                       
+
                             <i class="fab fa-html5 fa-2x" style="color:red;" alt="HTML5"></i>
                             <i class="fab fa-js-square fa-2x" style="color:#f0db4f" ; alt="JavaScript"></i>
-                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit160" class="stretched-link"></a>
+                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit160"
+                                class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 225:<br /> Database Design & Development</h5>
                             <p>Database design concepts using Oracle RDBMS.</p>
                             <i class="fas fa-database fa-2x" style="color: silver" alt="datbase"></i>
-                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit225" class="stretched-link"></a>
+                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit225"
+                                class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 230:<br /> Web Front-End Web Development</h5>
                             <p>Basic concepts of Front-End Development.</p>
                             <i class="fab fa-html5 fa-2x" style="color:red" ; alt="HTML5"></i>
@@ -64,13 +65,14 @@
                             <i class="fab fa-css3-alt fa-2x" style="color: deepskyblue;" alt="CSS3"></i>
                             <a href="https://wurz-joseph.github.io/cit230/index.html" class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 260:<br /> Object Oriented Programming</h5>
                             <p>OOP concepts (Java)</p>
                             <i class="fab fa-java fa-3x" style="color: darkblue;" alt="Java"></i>
-                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit260" class="stretched-link"></a>
+                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit260"
+                                class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 261:<br /> Mobile Application Development</h5>
                             <p>Single page web apps.</p>
                             <i class="fab fa-html5 fa-2x" style="color:red;" alt="HTML5"></i>
@@ -78,19 +80,20 @@
                             <i class="fab fa-css3-alt fa-2x" style="color: deepskyblue;" alt="CSS3"></i>
                             <a href="https://wurz-joseph.github.io/cit261/index.html" class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 325:<br /> Database Programming</h5>
                             <p>Database programming with PL/SQL and oracle databases.</p>
                             <i class="fas fa-database fa-2x" style="color: silver" alt="datbase"></i>
-                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit325" class="stretched-link"></a>
+                            <a href="https://github.com/Wurz-Joseph/wurz-joseph.github.io/tree/master/cit325"
+                                class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3 shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 360:<br /> Object Oriented Software Development</h5>
                             <p>OOP with JavaEE/advanced OOP concepts.</p>
                             <i class="fab fa-java fa-3x" style="color: darkblue;" alt="Java"></i>
                             <a href="https://github.com/Wurz-Joseph/cit360" class="stretched-link"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 m-md-3  shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="col-lg-3 col-md-4 m-md-3  shadow-sm p-3 mb-5 bg-white rounded hover border">
                             <h5>CIT 365:<br />.NET Software Development</h5>
                             <p>C# software development. Windows Desktop/ASP.NET</p>
                             <i class="fab fa-windows fa-2x" style="color: blueviolet"></i>
@@ -99,18 +102,18 @@
                     </div>
 
                 </div>
-            </div>
+        </div>
         </main>
     </div>
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-light bg-primary">
         <div class="container">
             &copy; 2020 - Portfolio
         </div>
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -118,7 +121,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e310e1b511.js" crossorigin="anonymous"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/scripts/parallax.min.js"></script>
+    <script src="/scripts/site.js" asp-append-version="true"></script>
 </body>
-
 </html>
