@@ -2,7 +2,7 @@ import Question from './questions.js';
 import Quiz from './quiz_controller.js';
 
 onload = async function getQuiz() {
-    const response = await fetch("https://opentdb.com/api.php?amount=6&category=18&type=multiple");
+    const response = await fetch("https://opentdb.com/api.php?amount=6&category=21&type=multiple");
     const data = await response.json();
 
     let questionText = [];
@@ -73,7 +73,7 @@ onload = async function getQuiz() {
 
         //show correct answers
         for (let i = 0; i < answer.length; i++) {
-            gameOverHtml += "<p class=answers>Question" + (i + 1) + ": " + answer[i] + "</p>";
+            gameOverHtml += "<p class=answers>Question " + (i + 1) + ": " + answer[i] + "</p>";
         }
 
         // 1. Create restart button
